@@ -17,7 +17,7 @@ let userEmail;
 const id = Symbol('123')
 const anotherId = Symbol('123')
 
-console.log(id === anotherId);
+// console.log(id === anotherId);
 
 // const bigNumber = 3456543576654356754n
 
@@ -34,7 +34,39 @@ let myObj = {
 }
 
 const myFunction = function(){
-    console.log("Hello world");
+    // console.log("Hello world");
 }
 
-console.log(typeof anotherId);
+// console.log(typeof anotherId);
+
+
+
+// **************** memory in javascript *************
+    //  1. Stack(Primitive)
+
+let myName = "Sandeepatel";
+let anotherName = myName;
+anotherName = "chaiwithSandy"
+
+// console.log(myName);
+// console.log(anotherName);
+
+
+    //  2. Heap(Non primitive)
+
+let userOne = {
+    email: "user@user.com",
+    password: "user@123"
+
+}
+
+let userTwo = userOne;
+
+// console.log(userOne);
+// console.log(userTwo);
+// console.table([userOne, userTwo])
+
+userTwo.email = "sandy@gmail.com";
+
+console.log(userTwo.email);
+console.log(userTwo.email);
