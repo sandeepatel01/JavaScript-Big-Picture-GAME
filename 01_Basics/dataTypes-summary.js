@@ -29,7 +29,7 @@ const anotherId = Symbol('123')
 
 const heros = ["shaktiman", "naagraj", "doga"];
 let myObj = {
-    name: "hitesh",
+    name: "sandy",
     age: 22,
 }
 
