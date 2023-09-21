@@ -39,8 +39,52 @@ let booleanIsLoggedIn = Boolean(isLoggedIn);
 
 let number = 55;
 
-console.log(number);
-console.log(typeof number);
+// console.log(number);
+// console.log(typeof number);
 let stringNumber = String(number);
-console.log(stringNumber);
-console.log(typeof stringNumber);
+// console.log(stringNumber);
+// console.log(typeof stringNumber);
+
+
+// ************* Operations ****************** 
+
+let value = 5;
+let negNalue = -value;
+
+// console.log(negNalue);
+
+// console.log(4+4);
+// console.log(4-4);
+// console.log(4*4);
+// console.log(4**2);
+// console.log(4/2);
+// console.log(4%2);
+
+// console.log("1" + 2);
+// console.log(1 + "2");
+// console.log("1" + "2");
+// console.log("1" + 2 + 2);
+// console.log(1 + 2 + "2");
+
+
+// console.log(true);
+// console.log(+true);
+// console.log(+"");
+
+let num1, num2, num3;
+num1 = num2 = num3;
+
+let gameCounter = 200;
+// ++gameCounter;
+gameCounter++;
+console.log(gameCounter);
+
+
+
+
+
+
+
+
+
+
