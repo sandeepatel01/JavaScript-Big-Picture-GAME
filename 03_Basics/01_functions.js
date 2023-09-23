@@ -46,7 +46,7 @@ function userLogginMsg(username){
 
 // console.log(userLogginMsg("sandy"));
 // console.log(userLogginMsg(""));
-console.log(userLogginMsg());
+// console.log(userLogginMsg());
 
 
 function userLogginMsg(username = "sandeep"){
@@ -56,4 +56,53 @@ function userLogginMsg(username = "sandeep"){
     }
     return `${username} just logged in`
 }
-console.log(userLogginMsg());
+// console.log(userLogginMsg());
+
+
+
+function calculateCartprice1(num){
+    return num
+}
+// console.log(calculateCartprice1(299, 399, 699, 999));
+
+
+// //    using (...)-> rest operator 
+function calculateCartprice(...num){
+    return num
+}
+// console.log(calculateCartprice(299, 399, 699, 999));
+
+
+
+function calculateCartprice(value1, value2, ...num){
+    return num
+}
+// console.log(calculateCartprice(299, 399, 699, 999));
+
+
+    // Objects Pass in functions 
+const user = {
+    username: "sandy",
+    prices: 299
+}
+   
+function objectHandler(anyobject){
+    // console.log(`username is ${anyobject.username} and price is ${anyobject.price} `);
+}
+objectHandler(user)
+
+objectHandler({
+    username: "sandeep",
+    price: 699
+})
+
+
+
+//    Array pass in function 
+let array = [299, 599, 799, 899, 999]
+
+function returnArrayValue(getarr){
+    return getarr[0]
+}
+// console.log(returnArrayValue(array));
+console.log(returnArrayValue([5,2,4,9]));
