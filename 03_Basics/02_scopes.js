@@ -53,7 +53,7 @@ console.log(addone(5))
 
 
 // console.log(addTwo(9));   // show error
-const addTwo = function(num){  //fxn declaration + variable hold
+const addTwo = function(num){  //fxn declaration + variable hold(addTwo)
     return num + 2
 }
 addTwo(5)
