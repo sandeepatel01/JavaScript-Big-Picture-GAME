@@ -13,9 +13,9 @@ if (true) {
 // console.log(b);
 // console.log(c);
 
-
+    // nested scope 
 function one(){
-    const username = "hitesh"
+    const username = "sandeep"
 
     function two(){
         const website = "youtube"
@@ -26,12 +26,12 @@ function one(){
      two()
 
 }
-
 // one()
 
+
 if (true) {
-    const username = "hitesh"
-    if (username === "hitesh") {
+    const username = "sandeep"
+    if (username === "sandeep") {
         const website = " youtube"
         // console.log(username + website);
     }
@@ -45,14 +45,16 @@ if (true) {
 
 
 console.log(addone(5))
-
-function addone(num){
+function addone(num){    // only fxn declaretion
     return num + 1
 }
+console.log(addone(5))
 
 
 
-addTwo(5)
-const addTwo = function(num){
+// console.log(addTwo(9));   // show error
+const addTwo = function(num){  //fxn declaration + variable hold
     return num + 2
 }
+addTwo(5)
+console.log(addTwo(9));
