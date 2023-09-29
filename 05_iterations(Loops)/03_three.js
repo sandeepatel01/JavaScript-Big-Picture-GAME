@@ -5,7 +5,7 @@
 // ["", "", ""] -> array with string
 // [{}, {}, {}]  -> array with object
 
-const arr = [1, 2, 3, 4, 5]
+const arr = [1, 2, 3, 4, 5]   // array ke liye forOf loop
 
 for (const num of arr) {
     //console.log(num);

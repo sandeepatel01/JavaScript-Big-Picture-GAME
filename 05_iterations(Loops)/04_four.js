@@ -2,7 +2,7 @@
 
 
 //    forIn loop in Object 
-const myObject = {
+const myObject = {      // object ke liye forIn loop
     js: 'javascript',
     cpp: 'C++',
     rb: "ruby",
