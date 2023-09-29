@@ -1,6 +1,6 @@
 // Array Specifice loops 
 
-// for of
+// for of -> direct value atti he
 
 // ["", "", ""] -> array with string
 // [{}, {}, {}]  -> array with object
