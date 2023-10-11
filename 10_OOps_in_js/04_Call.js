@@ -5,7 +5,8 @@ function SetUsername(username){
 }
 
 function createUser(username, email, password){
-    // SetUsername(this, username)
+    // SetUsername( username)
+    // SetUsername.call(username)
     SetUsername.call(this, username)
    
     this.email = email
