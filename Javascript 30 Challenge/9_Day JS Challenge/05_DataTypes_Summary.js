@@ -38,11 +38,20 @@ const myFunction = function () {
 }
 
 // console.log(typeof anotherId);
-
+console.log(typeof score);
+console.log(typeof scoreValue);
+console.log(typeof isLoggedIn);
+console.log(typeof outsideTemp);
+console.log(typeof userEmail);
+console.log(typeof id);
+console.log(typeof anotherId);
+console.log(typeof heros);
+console.log(typeof myObj);
+console.log(typeof myFunction);
 
 
 // **************** memory in javascript *************
-//  1. Stack(Primitive)
+//  1. Stack(Primitive) -> define variables ki copy milti he [call by value]
 
 let myName = "Sandeepatel";
 let anotherName = myName;
