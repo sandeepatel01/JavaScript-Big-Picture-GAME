@@ -22,7 +22,7 @@ console.log(real_another_array);
 
 console.log(Array.isArray("sandy"))
 console.log(Array.from("sandy"))
-console.log(Array.from({name: "sandy"})) // interesting
+console.log(Array.from({ name: "sandy" })) // interesting
 
 let score1 = 100
 let score2 = 200
