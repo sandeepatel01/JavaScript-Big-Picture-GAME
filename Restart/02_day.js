@@ -33,7 +33,7 @@ let userEmail = "google@gmail.com";
 // console.log(typeof productId);
 
 
-// ************* Conversion Operation in JavaScript *************** 
+// ************* Conversion  in JavaScript *************** 
 
 // let gameScore = 33;
 // let gameScore = "33";
@@ -63,9 +63,46 @@ let valueInBoolean = Boolean(isLogout);
 
 let number = 51;
 
-console.log(number);
-console.log(typeof number);
+// console.log(number);
+// console.log(typeof number);
 
 let valueInString = String(number);
-console.log(typeof valueInString);
-console.log(valueInString);
+// console.log(typeof valueInString);
+// console.log(valueInString);
+
+
+
+
+// ******************* Operation *********************** 
+
+let value = 5;
+let negativeValue = -value;
+
+// console.log(negativeValue);
+
+// console.log(2 ** 3);
+// console.log(2 / 4);
+// console.log(2 % 3);
+
+// console.log(1 + "2");
+// console.log("1" + 2);
+// console.log(1 + 2 + "3");
+// console.log("1" + 2 + 3);
+
+// console.log(true);
+// console.log(+true);
+
+// console.log(+"");
+// console.log(+false);
+
+// Pre-increment operator 
+let numbers = 5;
+let num = ++numbers;
+console.log(num);
+console.log(numbers);
+
+// Post-increment operator 
+let number2 = 5;
+let numb2 = number2++;
+console.log(numb2);
+console.log(number2)
