@@ -120,6 +120,8 @@ console.log(discordName.indexOf('p'));
 console.log(discordName.indexOf('d'));
 
 
+
+
 // const newString = discordName.substring(0, 4);
 // const newString = discordName.substring(1, 4);
 // const newString = discordName.substring(3, 6);
@@ -156,3 +158,71 @@ console.log(discordName.split(' '));
 // console.log(discordName.split(' ', '-'));
 
 
+//  blink Method
+// const contentString = "Hello, world";
+// document.body.innerHTML = contentString.blink();
+// console.log(contentString);
+
+
+
+// lastIndexof method 
+let sample = 'This is a sample sentence.';
+let indexOfIs = sentence.indexOf('is'); // Returns the index of the first occurrence of 'is'
+let lastIndexOfIs = sentence.lastIndexOf('is'); // Returns the index of the last occurrence of 'is'
+
+console.log(indexOfIs); // 2
+console.log(lastIndexOfIs); // 5
+
+// console.log(discordName.lastIndexOf('S'))
+// console.log(discordName.lastIndexOf('p'))
+console.log(discordName.lastIndexOf('d'))
+
+
+
+// concat() method 
+let str1 = "Sandeep";
+let str2 = " Patel";
+
+let greeting = str1.concat(str2);
+console.log(greeting);
+
+
+
+// charAt() and charCodeAt() Methods 
+let str = 'Hello, World!';
+let charAtIndex2 = str.charAt(2); // Returns the character at index 2 ('l')
+let charCodeAtIndex2 = str.charCodeAt(2); // Returns the Unicode value of the character at index 2 (108)
+
+console.log(charAtIndex2);
+console.log(charCodeAtIndex2);
+
+console.log(discordName.charCodeAt(1));
+
+
+
+// substring() method 
+let longString = 'This is a long string.';
+let substring = longString.substring(5, 10);
+
+console.log(substring); // 'is a '
+
+
+// substr() Method 
+let longString1 = 'This is a long string.';
+let subStr = longString1.substr(5, 7);
+
+console.log(subStr); // 'is a lo'
+
+
+
+
+// startsWith() and endsWith() Methods 
+let message = 'Hello, JavaScript!';
+let startsWithHello = message.startsWith('Hello'); // Returns true
+let endsWithScript = message.endsWith('Script'); // Returns true
+
+console.log(startsWithHello);
+console.log(endsWithScript);
+console.log(message.endsWith("JavaScript"));
+console.log(message.startsWith("Hello"));
+console.log(message.startsWith("Sandy"));
