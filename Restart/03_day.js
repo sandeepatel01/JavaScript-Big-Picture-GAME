@@ -226,3 +226,31 @@ console.log(endsWithScript);
 console.log(message.endsWith("JavaScript"));
 console.log(message.startsWith("Hello"));
 console.log(message.startsWith("Sandy"));
+
+
+
+// repeat() Methods 
+let repeatedString = 'Sandy'.repeat(3);
+console.log(repeatedString); // 'abcabcabc'
+
+
+
+// trimStart() and trimEnd() (introduced in ECMAScript 2019)
+
+let paddedString = '   Trim me!   ';
+let trimmedStartString = paddedString.trimStart();
+let trimmedEndString = paddedString.trimEnd();
+
+console.log(trimmedStartString); // 'Trim me!   '
+console.log(trimmedEndString); // '   Trim me!'
+
+
+
+// padStart() and padEnd()(introduced in ECMAScript 2017)
+
+let paddedString1 = '5';
+let paddedStart = paddedString1.padStart(3, '0'); // '005'
+let paddedEnd = paddedString1.padEnd(3, '0'); // '500'
+
+console.log(paddedStart);
+console.log(paddedEnd);
