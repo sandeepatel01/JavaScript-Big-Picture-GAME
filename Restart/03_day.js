@@ -645,7 +645,7 @@ const course = {
 // console.log(courseInstructor)
 // OR
 const { courseInstructor: instructor } = course
-console.log(instructor);
+// console.log(instructor);
 
 
 // // const navBar = (props.company) => {
@@ -662,10 +662,82 @@ console.log(instructor);
 //     "name": "sandeep",
 //     "coursename": "js in hindi",
 //     "price": "free"
-}
+// }
 
 // [
 //     {},
 //     {},
 //     {}
 // ]
+
+
+
+// ****************Functions in JavaScript *****************
+
+function myName() {
+    console.log("sandeep");
+    console.log("patel");
+}
+// myName();
+// myName;   // Function referance only not print any thing
+
+
+
+function addTwoNumber(num1, num2) {
+    console.log(num1 + num2);
+}
+// addTwoNumber(2, 2);    // (2,2)-> Argument
+// addTwoNumber(2, "3");
+// addTwoNumber(2, "2")
+// addTwoNumber("2", 2)
+// addTwoNumber(null, 2)
+// addTwoNumber(2, null)
+// addTwoNumber("2", null)
+// addTwoNumber(null, "2")
+
+// const sum = addTwoNumber(5, 5)
+// console.log("Sum: ", sum);
+
+
+
+
+function addTwoNumber1(num1, num2) {
+    let sum = num1 + num2;
+    return sum;
+    console.log("sandy");
+
+    return num1 + num2;
+}
+
+const result = addTwoNumber1(5, 5)
+// console.log("result: ", result);
+
+
+
+function userLogginMsg(username) {
+    if (username === undefined) {
+        console.log("Please enter a username");
+        return
+    }
+    if (!username) {
+        console.log("Please enter a username");
+        return
+    }
+    return `${username} just logged in`
+}
+
+// console.log(userLogginMsg("sandy"));
+// console.log(userLogginMsg(""));
+// console.log(userLogginMsg());
+
+
+function userLogginMsg(username = "sandeep") {
+    if (!username) {
+        console.log("Please enter a username");
+        return
+    }
+    return `${username} just logged in`
+}
+        
+// console.log(userLogginMsg());
+console.log(userLogginMsg("Sandy"));
