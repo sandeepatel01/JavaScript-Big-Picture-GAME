@@ -738,6 +738,122 @@ function userLogginMsg(username = "sandeep") {
     }
     return `${username} just logged in`
 }
-        
+
 // console.log(userLogginMsg());
-console.log(userLogginMsg("Sandy"));
+// console.log(userLogginMsg("Sandy"));
+
+
+
+function calculateCartprice1(num) {
+    return num
+}
+// console.log(calculateCartprice1(299, 399, 699, 999));
+
+
+// //    using (...)-> rest operator 
+function calculateCartprice(...num) {
+    return num
+}
+// console.log(calculateCartprice(299, 399, 699, 999));
+
+function calculateCartprice(value1, value2, ...num) {
+    return num
+}
+// console.log(calculateCartprice(299, 399, 699, 999));
+
+
+// ******************************** Objects Pass in functions *****************************************
+
+const user = {
+    username: "sandy",
+    price: 299,
+    // prices: 299
+}
+
+function objectHandler(anyobject) {
+    console.log(`username is ${anyobject.username} and price is ${anyobject.price} `);
+}
+// objectHandler(user)
+
+// objectHandler({
+//     username: "sandeep",
+//     price: 699
+// })
+
+
+// ************************************ Array pass in function *********************************
+let array = [299, 599, 799, 899, 999]
+
+function returnArrayValue(getarr) {
+    // return getarr[0]
+    // return getarr[1]
+    // return getarr[2]
+    // return getarr[4]
+    return getarr
+}
+// console.log(returnArrayValue(array));
+// console.log(returnArrayValue([5, 2, 4, 9]));
+
+
+// ********************* Scope IN JS **************** 
+
+var c = 300
+let a = 300
+if (true) {
+    let a = 10
+    const b = 20
+    var c = 30
+    // console.log("INNER: ", a);
+
+}
+
+// console.log(a);
+// console.log(b);
+// console.log(c);
+
+function one() {
+    const username = "sandeep"
+
+    function two() {
+        const website = "youtube"
+        console.log(username);
+    }
+    // console.log(website);
+
+    two()
+
+}
+one()
+
+
+if (true) {
+    const username = "sandeep"
+    if (username === "sandeep") {
+        const website = " youtube"
+        console.log(username + website);
+    }
+    console.log(website);
+}
+
+// console.log(username);
+
+
+// ++++++++++++++++++ interesting ++++++++++++++++++
+
+
+console.log(addone(5))
+function addone(num) {    // only fxn declaretion
+    return num + 1
+}
+console.log(addone(5))
+
+
+
+// Hoisting
+
+// console.log(addTwo(9));   // show error
+const addTwo = function (num) {  //fxn declaration + variable hold(addTwo)
+    return num + 2
+}
+addTwo(5)
+console.log(addTwo(9));
