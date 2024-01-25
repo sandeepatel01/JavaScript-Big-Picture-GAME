@@ -499,3 +499,50 @@ let score2 = 200
 let score3 = 300
 
 // console.log(Array.of(score0, score2, score3));
+
+
+
+
+// ************************ Object in JavaScript *********************
+
+// singleton
+// Object.create -> constructure method
+
+
+// object literals
+
+const mySym = Symbol("key1")
+
+
+const JsUser = {
+    name: "Sandeep",
+    "full name": "Sandeep Patel",
+    [mySym]: "mykey1",
+    // mySym: "mykey1",
+    age: 18,
+    location: "Bareilly",
+    email: "sandeep@google.com",
+    isLoggedIn: false,
+    lastLoginDays: ["Monday", "Saturday"]
+}
+
+// console.log(JsUser.email)
+// console.log(JsUser["email"])
+// console.log(JsUser["full name"])
+// console.log(JsUser[mySym])
+
+JsUser.email = "sandeep@chatgpt.com"
+// Object.freeze(JsUser)
+JsUser.email = "sandeep@microsoft.com"
+// console.log(JsUser);
+
+JsUser.greeting = function () {
+    console.log("Hello JS user");
+}
+JsUser.greetingTwo = function () {
+    console.log(`Hello JS user, ${this.name}`);
+}
+
+console.log(JsUser.greeting());
+// console.log(JsUser.greeting);
+console.log(JsUser.greetingTwo());
