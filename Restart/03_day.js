@@ -544,6 +544,128 @@ JsUser.greetingTwo = function () {
     console.log(`Hello JS user, ${this.name}`);
 }
 
-console.log(JsUser.greeting());
+// console.log(JsUser.greeting());
 // console.log(JsUser.greeting);
 // console.log(JsUser.greetingTwo());
+
+
+
+// const tinderUser = new Object()  // -->  singleton
+
+const tinderUser = {} //  --> Non singleton
+
+tinderUser.id = "123abc"
+tinderUser.name = "Sandy"
+tinderUser.isLoggedIn = false
+
+// console.log(tinderUser);
+
+const regularUser = {
+    email: "some@gmail.com",
+    fullname: {
+        userfullname: {
+            firstname: "sandeep",
+            lastname: "Patel"
+        }
+    }
+}
+// console.log(regularUser);
+// console.log(regularUser.fullname);
+// console.log(regularUser.fullname.userfullname);
+// console.log(regularUser.fullname.userfullname.firstname);
+// console.log(regularUser.fullname.userfullname.lastname);
+
+
+const obj1 = { 1: "a", 2: "b" }
+const obj2 = { 3: "a", 4: "b" }
+const obj4 = { 5: "a", 6: "b" }
+
+// const obj3 = { obj1, obj2 }
+// console.log(obj3);
+
+// const obj3 = Object.assign(obj1, obj2)
+// console.log(obj3);
+
+const obj3 = Object.assign({}, obj1, obj2)
+// console.log(obj3);
+
+// const obj3 = Object.assign({}, obj1, obj2, obj4)       // {} use as good practice
+// console.log(obj3);
+
+
+// const obj3 = { ...obj1, ...obj2 }  // mostly used
+// console.log(obj3);
+
+
+
+const users = [
+    {
+        id: 1,
+        email: "s@gmail.com"
+    },
+    {
+        id: 1,
+        email: "sp@gmail.com"
+    },
+    {
+        id: 1,
+        email: "s@gmail.com"
+    },
+]
+
+// console.log(users[1].email)
+// console.log(users[1].id)
+// console.log(users[2].email)
+
+
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
+
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUser.hasOwnProperty('isLoggedout'));
+
+
+
+
+
+
+// ************* Object distructuring ***************
+
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "sandeep"
+}
+
+// course.courseInstructor
+
+// const { courseInstructor } = course
+// console.log(courseInstructor)
+// OR
+const { courseInstructor: instructor } = course
+console.log(instructor);
+
+
+// // const navBar = (props.company) => {
+// const navBar = ({ company }) => {
+
+// }
+// navBar(company = "AnajMarket")
+
+
+
+//   JSON Formate
+
+// {
+//     "name": "sandeep",
+//     "coursename": "js in hindi",
+//     "price": "free"
+}
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
