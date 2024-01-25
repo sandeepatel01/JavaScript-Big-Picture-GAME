@@ -503,6 +503,7 @@ let score3 = 300
 
 
 
+
 // ************************ Object in JavaScript *********************
 
 // singleton
@@ -545,4 +546,4 @@ JsUser.greetingTwo = function () {
 
 console.log(JsUser.greeting());
 // console.log(JsUser.greeting);
-console.log(JsUser.greetingTwo());
+// console.log(JsUser.greetingTwo());
