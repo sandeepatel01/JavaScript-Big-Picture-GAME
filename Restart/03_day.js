@@ -315,19 +315,19 @@ const num6 = Number.POSITIVE_INFINITY
 // console.log(Math.max(4, 3, 6, 8));
 
 
-console.log(Math.random());
-console.log((Math.random() * 10) + 1);
-console.log(Math.floor(Math.random() * 10) + 1);
+// console.log(Math.random());
+// console.log((Math.random() * 10) + 1);
+// console.log(Math.floor(Math.random() * 10) + 1);
 
 
 const min = 10
 const max = 20
-console.log(Math.floor(Math.random() * (max - min + 1)) + min)
+// console.log(Math.floor(Math.random() * (max - min + 1)) + min)
 
 
 // toExponential(fractionDigits) method 
 let num = 123.456;
-console.log(num.toExponential(2));  // "1.23e+2"
+// console.log(num.toExponential(2));  // "1.23e+2"
 
 // valueOf() method 
 let numObj = new Number(42);
@@ -344,6 +344,7 @@ let todate = new Date();
 
 // console.log(todate);
 // console.log(todate.getDate());
+
 // console.log(todate.getDay());
 // console.log(todate.getFullYear());
 // console.log(todate.getHours());
@@ -353,10 +354,12 @@ let todate = new Date();
 // console.log(todate.getMonth());
 // console.log(todate.getMonth() + 1);
 // console.log(todate.getSeconds());
+
 // console.log(todate.getTime());
 // console.log(todate.getTimezoneOffset());
 // console.log(todate.getUTCDate());
 // console.log(todate.getUTCDay());
+
 
 // console.log(todate.toString());
 // console.log(todate.setDate());
@@ -385,8 +388,8 @@ let myTimeStamp = Date.now();
 // console.log(myTimeStamp);
 // console.log(myCreateDate.getTime());
 
-console.log(Date.now()); // milisecond 
-console.log(Math.floor(Date.now() / 1000));     // second
+// console.log(Date.now()); // milisecond 
+// console.log(Math.floor(Date.now() / 1000));     // second
 
 let newDate = new Date();
 
@@ -397,3 +400,66 @@ newDate.toLocaleString('default', {
 
 })
 
+
+
+
+
+// **************************Array In JavaScript ******************
+
+const arr = [10, 20, 30, 40, 50];
+const heros1 = ["Shaktiman", "nagraj"];
+
+const myArr = new Array(10, 20, 30, 40, 50);
+
+// console.log(arr);
+// console.log(myArr)
+// console.log(myArr[1]);
+
+
+
+// Array methods
+
+myArr.push(60)
+console.log(myArr);
+
+// myArr.push(70)
+// console.log(myArr);
+
+// myArr.pop()
+// console.log(myArr)
+
+// myArr.unshift(90)
+// console.log(myArr);
+
+// myArr.shift()
+// console.log(myArr)
+
+
+// console.log(myArr.includes(90));
+// console.log(myArr.includes(20));
+
+// console.log(myArr.indexOf(30));
+// console.log(myArr.indexOf(90));
+
+
+
+const newArr = myArr.join()
+
+// console.log(myArr);
+// console.log(newArr);
+
+
+
+// slice, splice
+
+console.log("A ", myArr);
+
+const myn1 = myArr.slice(1, 3)
+
+console.log(myn1);
+console.log("B ", myArr);
+
+
+const myn2 = myArr.splice(1, 3)
+console.log(myn2);
+console.log("C ", myArr);
