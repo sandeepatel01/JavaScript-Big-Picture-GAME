@@ -107,17 +107,17 @@ const discordName = new String('Sandeep-pt');
 // console.log(discordName.__proto__);
 
 
-console.log(discordName.length);
-console.log(discordName.toUpperCase());
-console.log(discordName.toLowerCase());
+// console.log(discordName.length);
+// console.log(discordName.toUpperCase());
+// console.log(discordName.toLowerCase());
 
-console.log(discordName.charAt(1));
-console.log(discordName.charAt(0))
-console.log(discordName.charAt(6));
+// console.log(discordName.charAt(1));
+// console.log(discordName.charAt(0))
+// console.log(discordName.charAt(6));
 
-console.log(discordName.indexOf('S'));
-console.log(discordName.indexOf('p'));
-console.log(discordName.indexOf('d'));
+// console.log(discordName.indexOf('S'));
+// console.log(discordName.indexOf('p'));
+// console.log(discordName.indexOf('d'));
 
 
 
@@ -127,34 +127,34 @@ console.log(discordName.indexOf('d'));
 // const newString = discordName.substring(3, 6);
 // const newString = discordName.substring(-3, 7);
 const newString = discordName.substring(3, 7);
-console.log(newString);
+// console.log(newString);
 
 
 // const anotherString = discordName.slice(-7, 3);
 // const anotherString = discordName.slice(-7, 7);
 const anotherString = discordName.slice(2, 7);
-console.log(anotherString)
+// console.log(anotherString)
 
 
 const newStringOne = "   Sandy       ";
-console.log(newStringOne);
-console.log(newStringOne.trim());
+// console.log(newStringOne);
+// console.log(newStringOne.trim());
 
 
 
 //    replace & include[t/f] method 
 const url = "https://sandeep.com/sandeep%20patel"
-console.log(url.replace('%20', '_'));
-console.log(url.includes('Sandy'))
+// console.log(url.replace('%20', '_'));
+// console.log(url.includes('Sandy'))
 
 let sentence = 'This is a sample sentence.';
 let includesSample = sentence.includes('sample'); // Returns true
 
-console.log(includesSample);
+// console.log(includesSample);
 
 
 // console.log(discordName.split('-'));
-console.log(discordName.split(' '));
+// console.log(discordName.split(' '));
 // console.log(discordName.split(' ', '-'));
 
 
@@ -170,12 +170,12 @@ let sample = 'This is a sample sentence.';
 let indexOfIs = sentence.indexOf('is'); // Returns the index of the first occurrence of 'is'
 let lastIndexOfIs = sentence.lastIndexOf('is'); // Returns the index of the last occurrence of 'is'
 
-console.log(indexOfIs); // 2
-console.log(lastIndexOfIs); // 5
+// console.log(indexOfIs); // 2
+// console.log(lastIndexOfIs); // 5
 
 // console.log(discordName.lastIndexOf('S'))
 // console.log(discordName.lastIndexOf('p'))
-console.log(discordName.lastIndexOf('d'))
+// console.log(discordName.lastIndexOf('d'))
 
 
 
@@ -184,7 +184,7 @@ let str1 = "Sandeep";
 let str2 = " Patel";
 
 let greeting = str1.concat(str2);
-console.log(greeting);
+// console.log(greeting);
 
 
 
@@ -193,10 +193,10 @@ let str = 'Hello, World!';
 let charAtIndex2 = str.charAt(2); // Returns the character at index 2 ('l')
 let charCodeAtIndex2 = str.charCodeAt(2); // Returns the Unicode value of the character at index 2 (108)
 
-console.log(charAtIndex2);
-console.log(charCodeAtIndex2);
+// console.log(charAtIndex2);
+// console.log(charCodeAtIndex2);
 
-console.log(discordName.charCodeAt(1));
+// console.log(discordName.charCodeAt(1));
 
 
 
@@ -204,14 +204,14 @@ console.log(discordName.charCodeAt(1));
 let longString = 'This is a long string.';
 let substring = longString.substring(5, 10);
 
-console.log(substring); // 'is a '
+// console.log(substring); // 'is a '
 
 
 // substr() Method 
 let longString1 = 'This is a long string.';
 let subStr = longString1.substr(5, 7);
 
-console.log(subStr); // 'is a lo'
+// console.log(subStr); // 'is a lo'
 
 
 
@@ -221,17 +221,17 @@ let message = 'Hello, JavaScript!';
 let startsWithHello = message.startsWith('Hello'); // Returns true
 let endsWithScript = message.endsWith('Script'); // Returns true
 
-console.log(startsWithHello);
-console.log(endsWithScript);
-console.log(message.endsWith("JavaScript"));
-console.log(message.startsWith("Hello"));
-console.log(message.startsWith("Sandy"));
+// console.log(startsWithHello);
+// console.log(endsWithScript);
+// console.log(message.endsWith("JavaScript"));
+// console.log(message.startsWith("Hello"));
+// console.log(message.startsWith("Sandy"));
 
 
 
 // repeat() Methods 
 let repeatedString = 'Sandy'.repeat(3);
-console.log(repeatedString); // 'abcabcabc'
+// console.log(repeatedString); // 'abcabcabc'
 
 
 
@@ -241,8 +241,8 @@ let paddedString = '   Trim me!   ';
 let trimmedStartString = paddedString.trimStart();
 let trimmedEndString = paddedString.trimEnd();
 
-console.log(trimmedStartString); // 'Trim me!   '
-console.log(trimmedEndString); // '   Trim me!'
+// console.log(trimmedStartString); // 'Trim me!   '
+// console.log(trimmedEndString); // '   Trim me!'
 
 
 
@@ -252,5 +252,74 @@ let paddedString1 = '5';
 let paddedStart = paddedString1.padStart(3, '0'); // '005'
 let paddedEnd = paddedString1.padEnd(3, '0'); // '500'
 
-console.log(paddedStart);
-console.log(paddedEnd);
+// console.log(paddedStart);
+// console.log(paddedEnd);
+
+
+
+
+
+
+// ************************************ Numbers in JavaScript *************************************
+
+const score1 = 50;
+// console.log(score);
+
+const balance = new Number(200);
+// console.log(balance);
+
+// toString() Method 
+// console.log(balance.toString());
+// console.log(balance.toString().length);
+
+// toFixed() method 
+// console.log(balance.toFixed(5));
+// console.log(balance.toFixed(2));
+
+
+// toPrecision() Method 
+// const bankBalance = 155;
+const bankBalance = 155.456;
+// console.log(bankBalance.toPrecision(4));
+// console.log(bankBalance.toPrecision(2));
+// console.log(bankBalance.toPrecision(3));
+
+
+// toLocalString() Method 
+
+const SBIBalance = 20000;
+// console.log(SBIBalance.toLocaleString());  //usa form
+// console.log(SBIBalance.toLocaleString('en-IN'));
+
+
+const num1 = Number.MAX_SAFE_INTEGER
+const num2 = Number.MIN_VALUE
+const num3 = Number.isInteger
+const num4 = Number.MAX_VALUE
+const num5 = Number.NEGATIVE_INFINITY
+const num6 = Number.POSITIVE_INFINITY
+
+// console.table([num1, num2, num3, num4, num5, num6])
+
+
+
+
+// **************** Maths In JavaScript ************ 
+// console.log(Math);
+// console.log(Math.abs(-4));
+// console.log(Math.abs(4));
+// console.log(Math.round(4.6));
+// console.log(Math.ceil(4.2));
+// console.log(Math.floor(4.9));
+// console.log(Math.min(4, 3, 6, 8));
+// console.log(Math.max(4, 3, 6, 8));
+
+
+console.log(Math.random());
+console.log((Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+
+
+const min = 10
+const max = 20
+console.log(Math.floor(Math.random() * (max - min + 1)) + min)
