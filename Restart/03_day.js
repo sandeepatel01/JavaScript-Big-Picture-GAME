@@ -927,5 +927,26 @@ const addTwo3 = (num1, num2) => ({ username: "sandeep" })
 console.log(addTwo3(3, 4))
 
 
-// const myArray = [2, 5, 3, 7, 8]
-// myArray.forEach(() => {})
+    // const myArray = [2, 5, 3, 7, 8]
+    // myArray.forEach(() => {})
+
+
+
+    // ******************** Immediately Invoked Function Expressions (IIFE) *************** 
+
+
+
+    (function chai() {
+        // named IIFE
+        console.log(`DB CONNECTED`);
+    })(); // ;-> very important
+
+
+(() => {
+    console.log(`DB CONNECTED TWO `);
+})();
+
+
+((name) => {
+    console.log(`DB CONNECTED TWO ${name}`);
+})('sandeep')
