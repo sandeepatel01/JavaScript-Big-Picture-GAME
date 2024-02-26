@@ -258,7 +258,7 @@ This code demonstrates the usage of a **`for...in`** loop in JavaScript to itera
 
 
 
-        ## 3. forEach loop
+## 3. forEach loop
 
 - In JavaScript, the **`forEach()`** method is used to iterate over elements in an array. It executes a provided function once for each array element.
 - The syntax looks like this:
