@@ -94,6 +94,8 @@ If you want to iterate over the properties of an object, you typically use a **`
 
 
 
+
+
 ## 2. for in loop
 
 - In JavaScript, the **`for...in`** loop is used to iterate over the enumerable properties of an object.
@@ -252,3 +254,116 @@ This code demonstrates the usage of a **`for...in`** loop in JavaScript to itera
         age: 30
         
         ```
+
+
+
+
+        ## 3. forEach loop
+
+- In JavaScript, the **`forEach()`** method is used to iterate over elements in an array. It executes a provided function once for each array element.
+- The syntax looks like this:
+
+```jsx
+array.forEach(function(currentValue, index, array) {
+    // Do something with currentValue
+});
+
+```
+
+- **`currentValue`**: The current element being processed in the array.
+- **`index`** (optional): The index of the current element being processed in the array.
+- **`array`** (optional): The array **`forEach()`** was called upon.
+
+Here's a simple example of how you can use **`forEach()`**:
+
+- Using Array
+
+```jsx
+const coding = ["js", "ruby", "java", "python", "cpp"]
+
+coding.forEach( function (val){     //is callback function -> callback function ka name nahi hota
+    console.log(val);
+} )
+```
+
+1. **`const coding = ["js", "ruby", "java", "python", "cpp"]`**: This line declares a constant variable **`coding`** and assigns it an array containing strings representing programming languages.
+2. **`coding.forEach(function(val) { ... });`**: This line invokes the **`forEach()`** method on the **`coding`** array. The **`forEach()`** method takes a function as an argument, which will be called for each element in the array.
+3. **`function(val) { console.log(val); }`**: This is the function being passed as an argument to **`forEach()`**. It is an anonymous function (meaning it has no name), and it takes one parameter, **`val`**, which represents the current element being iterated over in the array. Inside this function, **`console.log(val)`** prints each element of the array to the console.
+
+So, when this code runs, it will print each programming language in the **`coding`** array to the console, one by one. The output will be:
+
+```jsx
+js
+ruby
+java
+python
+cpp
+
+```
+
+```jsx
+const coding = ["js", "ruby", "java", "python", "cpp"]
+
+coding.forEach( (item) => {
+    console.log(item);
+} )
+```
+
+1. **`const coding = ["js", "ruby", "java", "python", "cpp"];`**: This line initializes a constant variable **`coding`** and assigns it an array containing strings representing programming languages.
+2. **`coding.forEach((item) => { console.log(item); });`**: The **`forEach()`** method is called on the **`coding`** array. It takes a callback function as an argument. In this case, an arrow function is used as the callback. The arrow function takes one parameter, **`item`**, which represents the current element being iterated over in the array. Inside the arrow function, **`console.log(item)`** is called, which prints each element of the array to the console.
+    - **`(item) => { console.log(item); }`**: This is the arrow function used as the callback for **`forEach()`**. It takes one parameter, **`item`**, and logs it to the console using **`console.log()`**.
+
+```jsx
+const coding = ["js", "ruby", "java", "python", "cpp"]
+
+function printMe(item){
+    console.log(item);
+}
+coding.forEach(printMe)  // printme function pass as a referance
+```
+
+1. **`const coding = ["js", "ruby", "java", "python", "cpp"];`**: This line initializes a constant variable **`coding`** and assigns it an array containing strings representing programming languages.
+2. **`function printMe(item) { console.log(item); }`**: This is a named function **`printMe`** that takes one parameter **`item`** and logs it to the console.
+3. **`coding.forEach(printMe);`**: The **`forEach()`** method is called on the **`coding`** array. It takes a callback function as an argument. In this case, the **`printMe`** function is passed as a reference to **`forEach()`**. This means that for each element in the **`coding`** array, the **`printMe`** function will be called with the current element as an argument
+
+ the **`forEach()`** method iterates over each element in the **`coding`** array, and for each element, it calls the **`printMe`** function, passing the current element as an argument. The **`printMe`** function then logs each element to the console.
+
+When executed, this code will output:
+
+```jsx
+js
+ruby
+java
+python
+cpp
+
+```
+
+- Using Object in Array
+
+```jsx
+const myCoding = [
+    {
+        languageName: "javascript",
+        languageFileName: "js"
+    },
+    {
+        languageName: "java",
+        languageFileName: "java"
+    },
+    {
+        languageName: "python",
+        languageFileName: "py"
+    },
+]
+
+myCoding.forEach( (item) => {
+    // console.log(item);
+    // console.log(item.languageName);
+    console.log(item.languageFileName);
+} )
+```
+
+1. **`const myCoding = [...]`**: This line initializes a constant variable **`myCoding`** and assigns it an array containing objects. Each object represents a programming language and has two properties: **`languageName`** and **`languageFileName`**.
+2. **`myCoding.forEach((item) => { ... });`**: The **`forEach()`** method is called on the **`myCoding`** array. It takes a callback function as an argument. In this case, an arrow function is used as the callback. The arrow function takes one parameter, **`item`**, which represents the current element being iterated over in the array.
+3. **`console.log(item.languageFileName);`**: Inside the arrow function, **`console.log(item.languageFileName)`** is called. This accesses the **`languageFileName`** property of each object (**`item`**) in the **`myCoding`** array and logs it to the console
