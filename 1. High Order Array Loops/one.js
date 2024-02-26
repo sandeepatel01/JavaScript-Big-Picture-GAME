@@ -1,10 +1,3 @@
-// Array Specifice loops 
-
-// for of -> direct value atti he
-
-// ["", "", ""] -> array with string
-// [{}, {}, {}]  -> array with object
-
 const arr = [1, 2, 3, 4, 5]   // array ke liye forOf loop
 
 for (const num of arr) {
@@ -15,7 +8,6 @@ const greetings = "Hello world!"
 for (const greet of greetings) {
     //console.log(`Each char is ${greet}`)
 }
-
 
 
 // Maps
