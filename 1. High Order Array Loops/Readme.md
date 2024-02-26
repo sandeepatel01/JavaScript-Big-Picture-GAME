@@ -367,3 +367,106 @@ myCoding.forEach( (item) => {
 1. **`const myCoding = [...]`**: This line initializes a constant variable **`myCoding`** and assigns it an array containing objects. Each object represents a programming language and has two properties: **`languageName`** and **`languageFileName`**.
 2. **`myCoding.forEach((item) => { ... });`**: The **`forEach()`** method is called on the **`myCoding`** array. It takes a callback function as an argument. In this case, an arrow function is used as the callback. The arrow function takes one parameter, **`item`**, which represents the current element being iterated over in the array.
 3. **`console.log(item.languageFileName);`**: Inside the arrow function, **`console.log(item.languageFileName)`** is called. This accesses the **`languageFileName`** property of each object (**`item`**) in the **`myCoding`** array and logs it to the console
+
+
+
+```jsx
+const coding = ["js", "ruby", "java", "python", "cpp"]
+
+// const values = coding.forEach( (item) => {
+//     console.log(item);
+// } )
+// console.log("Valeu:", values);
+
+const values = coding.forEach( (item) => {
+    console.log(item);
+    return item
+} )     // forEach no return value
+
+console.log(values);
+```
+
+1. **`const coding = ["js", "ruby", "java", "python", "cpp"];`**: This line initializes a constant variable **`coding`** and assigns it an array containing strings representing programming languages.
+2. **`const values = coding.forEach((item) => { ... });`**: The **`forEach()`** method is called on the **`coding`** array. It takes a callback function as an argument. In this case, an arrow function is used as the callback. The arrow function takes one parameter, **`item`**, which represents the current element being iterated over in the array.
+3. **`console.log(item);`**: Inside the arrow function, **`console.log(item)`** is called, which prints each element of the array to the console.
+4. **`return item;`**: This line attempts to return the current element **`item`** within the callback function. However, it's important to note that the **`forEach()`** method doesn't return any value. Even if you try to return something from within the callback function, it won't affect the **`forEach()`** method itself.
+5. **`const values = ...`**: This line declares a constant variable **`values`** and attempts to assign the return value of the **`forEach()`** method to it. However, since **`forEach()`** doesn't return anything, the value of **`values`** will be **`undefined`**.
+6. **`console.log(values);`**: Finally, **`console.log(values)`** prints the value of **`values`** to the console, which is **`undefined`**.
+
+So, when this code is executed, it will print each programming language in the **`coding`** array to the console and then print **`undefined`** because the **`forEach()`** method doesn't return any value. The output will be:
+
+```jsx
+js
+ruby
+java
+python
+cpp
+undefined
+
+```
+
+### filter() Method
+
+- the **`filter()`** method is used to create a new array with all elements that pass the test implemented by the provided function. It does not change the original array.
+- The syntax is as follows:
+
+```jsx
+let newArray = array.filter(callback(element[, index[, array]])[, thisArg])
+```
+
+- **`callback`**: Function to test each element of the array. It takes three arguments:
+    - **`element`**: The current element being processed in the array.
+    - **`index`** (optional): The index of the current element being processed in the array.
+    - **`array`** (optional): The array **`filter()`** was called upon.
+- **`thisArg`** (optional): Value to use as **`this`** when executing **`callback`**.
+
+Here's an example of how you can use **`filter()`**:
+
+```jsx
+const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const newNums = myNums.filter( (num) => num > 4 )   // filter bhi callback function he
+console.log(newNums);   //  output 1
+```
+
+using forEach
+
+```jsx
+const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const newNums = []
+myNums.forEach( (num) => {    // define scope so add return keyword
+    if (num > 4) {
+        newNums.push(num)
+    }
+} )
+
+console.log(newNums);   // same output as output 1
+```
+
+```jsx
+const books = [
+    { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },
+    { title: 'Book Two', genre: 'Non-Fiction', publish: 1992, edition: 2008 },
+    { title: 'Book Three', genre: 'History', publish: 1999, edition: 2007 },
+    { title: 'Book Four', genre: 'Non-Fiction', publish: 1989, edition: 2010 },
+    { title: 'Book Five', genre: 'Science', publish: 2009, edition: 2014 },
+    { title: 'Book Six', genre: 'Fiction', publish: 1987, edition: 2010 },
+    { title: 'Book Seven', genre: 'History', publish: 1986, edition: 1996 },
+    { title: 'Book Eight', genre: 'Science', publish: 2011, edition: 2016 },
+    { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
+  ];
+
+//   let userBooks = books.filter( (bk) => bk.genre === 'History')
+//   userBooks = books.filter( (bk) => bk.genre === 'Fiction')
+//   userBooks = books.filter( (bk) => bk.genre === 'Science')
+//   userBooks = books.filter( (bk) => bk.genre === 'Non-Fiction')
+
+  userBooks = books.filter( (bk) => { 
+    return bk.publish >= 1995 && bk.genre === "History"
+})
+
+console.log(userBooks);
+```
+
+
