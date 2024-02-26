@@ -92,3 +92,163 @@ If you want to iterate over the properties of an object, you typically use a **`
 
 ### the **`for...of`** loop provides a convenient way to iterate over the values of iterable objects in JavaScript, making code more readable and concise when you don't need to work with indices.
 
+
+
+## 2. for in loop
+
+- In JavaScript, the **`for...in`** loop is used to iterate over the enumerable properties of an object.
+- Here's the basic syntax:
+
+```jsx
+for (variable in object) {
+  // code to be executed
+}
+
+```
+
+- **`variable`**: A variable that will be assigned to each property in the object on each iteration.
+- **`object`**: The object whose enumerable properties are iterated.
+
+- using a **`for...in`** loop to iterate over the elements of an object:
+
+```jsx
+//    forIn loop in Object 
+const myObject = {      // object ke liye forIn loop
+    js: 'javascript',
+    cpp: 'C++',
+    rb: "ruby",
+    swift: "swift by apple"
+}
+
+for (const key in myObject) {
+    // console.log(key);
+    // console.log(myObject[key]);
+    // console.log(`${key} shortcut is for ${myObject[key]}`);
+}
+```
+
+This code demonstrates the usage of a **`for...in`** loop in JavaScript to iterate over the properties of an object **`myObject`**. Let's break down the code:
+
+1. First, an object named **`myObject`** is defined, which contains key-value pairs where keys represent programming language abbreviations and values represent their corresponding full names.
+2. The **`for...in`** loop is used to iterate over the properties of the **`myObject`** object.
+3. Inside the loop:
+    - The **`const key`** variable is declared to represent each property/key of the **`myObject`** object in each iteration.
+    - Various actions are commented out:
+        - **`console.log(key);`**: This logs the current key (e.g., 'js', 'cpp', etc.) to the console.
+        - **`console.log(myObject[key]);`**: This logs the value corresponding to the current key to the console (e.g., 'javascript', 'C++', etc.).
+        - **`console.log(`**${key} shortcut is for ${myObject[key]}**`);`**: This logs a formatted string indicating the key and its corresponding value to the console (e.g., 'js shortcut is for javascript', 'cpp shortcut is for C++', etc.).
+        
+        ### In Array
+        
+        ```jsx
+             // forIn loop in Array 
+        const programming = ["js", "rb", "py", "java", "cpp"]
+        
+        for (const key in programming) {
+            console.log(key);
+            // console.log(programming[key]);
+        }
+        ```
+        
+        This code attempts to use a **`for...in`** loop to iterate over the elements of an array named **`programming`**. However, using **`for...in`** loop with arrays in JavaScript is generally not recommended because it iterates over all enumerable properties of an object, including array indices, as well as properties inherited from the prototype chain. This can lead to unexpected behavior.
+        
+        Let's break down the code:
+        
+        1. An array named **`programming`** is defined, containing several programming language abbreviations.
+        2. The **`for...in`** loop is used to iterate over the indices (or keys) of the array.
+        
+        Inside the loop:
+        
+        - The **`const key`** variable is declared to represent each index of the array in each iteration.
+        - **`console.log(key);`** prints the current index to the console.
+        
+        However, using **`for...in`** loop with arrays in JavaScript may not produce the expected behavior, as it iterates over all enumerable properties, not just array elements. In this case, it will iterate over the indices of the array, but it's not guaranteed to iterate in numerical order, and it may also include properties inherited from the array's prototype.
+        
+        To iterate over the elements of an array in JavaScript, it's recommended to use a regular **`for`** loop, **`forEach()`** method, or other array iteration methods like **`map()`**, **`filter()`**, etc. Here's how you could iterate over the elements of the **`programming`** array using a regular **`for`** loop:
+        
+        ```jsx
+        for (let i = 0; i < programming.length; i++) {
+            console.log(programming[i]);
+        }
+        
+        ```
+        
+        ### In map
+        
+        ```jsx
+        const map = new Map()   // not iterateble
+        map.set('IN', "India")
+        map.set('USA', "United States of America")
+        map.set('Fr', "France")
+        map.set('IN', "India")
+        
+        for (const key in map) {
+            console.log(key);
+        }
+        ```
+        
+        This code attempts to iterate over the properties of a Map object using a **`for...in`** loop. Let's break down the code:
+        
+        1. A Map object named **`map`** is created using the **`new Map()`** constructor. Map objects in JavaScript are collections of key-value pairs where both the keys and the values can be of any type.
+        2. Several key-value pairs are added to the Map using the **`set()`** method. It's worth noting that when setting a key that already exists in the Map, the previous value associated with that key will be replaced by the new one. In this case, the key **`'IN'`** is set twice with the value **`'India'`**, but only the last one will be stored.
+        3. The **`for...in`** loop is used to iterate over the properties of the **`map`** object.
+        
+        Inside the loop:
+        
+        - The **`const key`** variable is declared to represent each property/key of the **`map`** object in each iteration.
+        - **`console.log(key);`** prints the current property/key to the console.
+        
+        However, using **`for...in`** loop with Map objects in JavaScript is not recommended. The reason is that Map objects are not regular JavaScript objects, and their properties are not enumerable. The **`for...in`** loop in JavaScript is designed to iterate over the enumerable properties of an object, but Map objects do not have enumerable properties in the same sense as regular objects.
+        
+        If you want to iterate over the key-value pairs of a Map object, you can use methods provided by the Map object itself, such as **`forEach()`**:
+        
+        ```jsx
+        map.forEach((value, key) => {
+            console.log(key + ': ' + value);
+        });
+        
+        ```
+        
+        ### Here's an example of how you can use it:
+        
+        ```jsx
+        const person = {
+          firstName: 'John',
+          lastName: 'Doe',
+          age: 30
+        };
+        
+        for (let key in person) {
+          console.log(key + ': ' + person[key]);
+        }
+        
+        ```
+        
+        This will output:
+        
+        ```jsx
+        firstName: John
+        lastName: Doe
+        age: 30
+        
+        ```
+        
+        However, it's important to note that **`for...in`** loop iterates over all enumerable properties, including those inherited from the object's prototype chain. If you only want to iterate over an object's own properties, you should use **`hasOwnProperty()`** method to check if the property belongs to the object itself:
+        
+        ```jsx
+        for (let key in person) {
+          if (person.hasOwnProperty(key)) {
+            console.log(key + ': ' + person[key]);
+          }
+        }
+        
+        ```
+        
+        This will only output the object's own properties:
+        
+        ```jsx
+        firstName: John
+        lastName: Doe
+        age: 30
+        
+        ```
