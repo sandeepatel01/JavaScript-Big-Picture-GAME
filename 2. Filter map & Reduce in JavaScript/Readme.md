@@ -114,3 +114,58 @@ console.log(newNumsOne);
 2. **`.map((num) => num + 1)`**: This second **`map()`** call adds 1 to each element of the array returned by the previous **`map()`** call. It creates another new array with the updated elements.
 3. **`.filter((num) => num >= 40)`**: This **`filter()`** call filters out elements from the array returned by the second **`map()`** call, keeping only those elements that are greater than or equal to 40.
 4. **`console.log(newNumsOne)`**: Finally, this statement logs the resulting array after all the transformations and filtering have been applied.
+
+
+
+## 3. reduce() Method
+
+- the **`reduce()`** method is used to apply a function to each element in an array and reduce the array to a single value.
+- The syntax for the **`reduce()`**
+
+```jsx
+array.reduce(callbackFunction, initialValue)
+```
+
+Here, **`callbackFunction`** is a function that is called for each element in the array, and **`initialValue`** is an optional parameter that specifies the initial value of the accumulator. The callback function takes four arguments: **`accumulator`**, **`currentValue`**, **`currentIndex`**, and **`array`**. The **`accumulator`** is the value returned by the previous invocation of the callback function, or the initial value if supplied.
+
+### Here's a simple example to illustrate the usage of the **`reduce()`** method:
+
+```jsx
+const numbers = [1, 2, 3]
+
+//   reduce use for add numbers 
+
+const myTotal = myNums.reduce(function (acc, currval) {      // acc -> accumilator
+    console.log(`acc: ${acc} and currval: ${currval}`);      // currval -> current value
+    return acc + currval
+}, 0)  // 0 = acc
+
+console.log("total:", myTotal);
+```
+
+In this example, the **`reduce()`** method is used to calculate the sum of all the elements in the **`numbers`** array. The **`callbackFunction`** takes two arguments: **`accumulator`** and **`currentValue`**, and returns the sum of these two values. The initial value of the accumulator is **`0`**.
+
+```jsx
+const shoppingCart = [
+    {
+        itemName: "js course",
+        price: 2999
+    },
+    {
+        itemName: "py course",
+        price: 999
+    },
+    {
+        itemName: "mobile dev course",
+        price: 5999
+    },
+    {
+        itemName: "data science course",
+        price: 12999
+    },
+]
+
+const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
+
+console.log(priceToPay);
+```
