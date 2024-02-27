@@ -109,5 +109,3 @@ Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
 
 - This output represents the entire HTML document structure, including the **`<!DOCTYPE html>`** declaration, **`<html>`**, **`<head>`**, and **`<body>`** tags, as well as any other elements and content within the document.
 - The **`window.document`** object provides methods and properties for accessing and manipulating the content of the HTML document, such as **`getElementById()`**, **`getElementsByClassName()`**, **`querySelector()`**, **`querySelectorAll()`**, **`createElement()`**, **`appendChild()`**, **`removeChild()`**, and many more.
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/1163cc1b-2e0b-4fcc-b6df-5b06ec3865aa/4bb4c152-a4cb-4ba3-a09b-543e4abacedc/Untitled.png)
