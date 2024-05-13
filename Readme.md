@@ -1927,3 +1927,156 @@ arr.forEach(function (val) {
 
 - Synchronous code mein code humesha line by line chalta hai
 - Async code line by line nahi chalta, saara async code ek saath shuru kar diya jaata hai and jo pahle complete hojaaye uska answer dedliya jaata hai.
+
+
+## 23. This Keyword
+
+- this keyword js mein one of the most suspenseful keyword
+- keyword ka matlab hota hai aisa word jiska koi matlab ho programming
+lang mein
+- this ki value baar baar badal sakti hai alag alag conditions mein, saari
+conditions ko seekh jaao to this ko samajh jaaoge
+
+1. global → window
+
+```jsx
+console.log(this);
+```
+
+1. function → window
+
+```jsx
+function sand(){
+    console.log(this);
+}
+
+sand();
+```
+
+1. method → object
+
+```jsx
+var obj = {
+name : function(){
+    // console.log(this);
+    console.log(this.age);
+},
+age: 25,
+email: "sand@gmail.com"
+}
+
+obj.name();
+```
+
+1. function inside method (ES5) → window
+
+```jsx
+var obj2 = {
+ sayName: function(){
+    console.log(this.age);
+     function childfnc(){
+       console.log(this);
+    //    console.log(this.age);
+}
+
+childfnc();
+},
+
+age: 25
+}
+
+obj2.sayName();
+```
+
+1. function inside method (ES6) →object
+
+```jsx
+var obj2 = {
+ sayName: function(){
+    console.log(this.age);
+const child = () => {
+    console.log(this);
+}
+
+child();
+},
+
+age: 25
+}
+
+obj2.sayName();
+```
+
+```jsx
+// window
+var obj3 = {
+    sayName: ()=>{
+        console.log(this);
+    }
+}
+
+obj3.sayName();
+```
+
+1. constructor function mein this ki value → new blank object
+
+```jsx
+function add(){
+    console.log(this);
+}
+
+const ans = new add();
+```
+
+1. event listener mein this ki value → that element jispar event listener laga ho
+
+```jsx
+document.querySelector("button")
+.addEventListener("click", function(){
+    console.log(this);
+})
+```
+
+## 24.  call apply & bind
+
+- ye teen tareeke hai function ko call karne ke kisi object ko this maan kar
+1. call
+
+```jsx
+const obj = { name: "Sandy" }
+
+function abcd() {
+    console.log(this);
+};
+
+abcd() // this value -> window
+
+abcd.call(12)  // this value -> number
+abcd.call("12")  // this value -> String
+abcd.call(obj)  // this value -> Onject
+```
+
+2. apply
+
+```jsx
+const obj = { name: "Sandy" }
+
+function abcd(a, b, c) {
+    console.log(this);
+};
+
+abcd.apply(obj, [2, 4, 6]) 
+```
+
+1. bind → bind function ko chalata nhi he ek aur function deta he retuen karke jisko ham baad me chala skte he
+```jsx
+const obj = { name: "Sandy" }
+
+function abcd(a, b, c) {
+    console.log(this);
+};
+
+const bindFxn = abcd.bind(obj);
+
+bindFxn()
+```
