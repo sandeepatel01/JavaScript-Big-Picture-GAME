@@ -2080,8 +2080,6 @@ const bindFxn = abcd.bind(obj);
 
 bindFxn()
 ```
-
-
 ## 25. Prototypal inheritance
 
 - hum objects create karte hai and kisi ek parent constructor function ke prototype mein kuchh add kr dete hai and jab bhi add hota hai to wo parent se banne waale sabhi children instances ko wo properties jo parent ko prototype mein di gayi thi wo milti hai saugaat mein.
@@ -2112,3 +2110,144 @@ function kahte hai
 - aisa koi bhi function jismein aap this ka upyog kar rhe ho aur
 us function ko call karte waqt aap new ka upypog karein, to new ka
 matlab waha par ek blank object hojaata hai
+
+```jsx
+function makeHuman1(name, age) {
+    this.name = name;
+    this.age = age;
+    this.printName = function () {
+        console.log(this.name);
+    }
+
+}
+
+let human = makeHuman1("Sandy", 22);
+let human1 = makeHuman1("Sam", 21);
+
+console.log(human.printName);
+console.log(human1.printName);
+```
+
+```jsx
+function makeHuman(name, age) {
+    this.name = name;
+    this.age = age;
+
+}
+
+makeHuman.prototype.course = "BTech";
+makeHuman.prototype.department = "CS&IT";
+
+let human = makeHuman1("Sandy", 22);
+let human1 = makeHuman1("Sam", 21);
+```
+
+## 26. Closures
+
+- aisa koi bhi function jo ek aur function ko return karde, aur use kare parent function ka koi variable usey closure kahte hai
+
+```jsx
+
+function counter() {
+    var count = 1;
+
+    return function () {
+        count++;
+        console.log(count);
+    }
+}
+
+let fxn = counter();
+
+console.log(fxn());
+```
+
+```jsx
+function timer() {
+    var a = 10;
+    return setTimeout(function () {
+        console.log(a);
+    }, 5000)
+}
+
+let time = timer();
+console.log(time());
+```
+
+## 27. Event delegation
+
+- event delegation jab aap event listener se kai saare different elements ke events 1<0 handle kar sake
+- event listener ko parent par lagao and unko id, class ya fir tag ke basis par differentiate karke different task karaol
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/1163cc1b-2e0b-4fcc-b6df-5b06ec3865aa/ec77d37d-6aca-4228-aad9-7a702a0d85d8/Untitled.png)
+
+```jsx
+var parent = document.querySelector("#parent");
+
+parent.addEventListener("click", function (details) {
+    // console.log(details);
+    // console.log(details.target);
+
+    if (details.target.id === "play") {
+        console.log("play song");
+    } else if (details.target.id === "pause") {
+        console.log("pause song");
+    }
+})
+```
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/1163cc1b-2e0b-4fcc-b6df-5b06ec3865aa/5727bcfc-8269-4392-8401-5f8188165163/Untitled.png)
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/1163cc1b-2e0b-4fcc-b6df-5b06ec3865aa/3fdc12c2-324e-448d-842e-f417b4783a54/Untitled.png)
+
+## 28. High Order Function
+
+- aisa koi fnc jo ki ek fnc ko parameter mein accept karle and/or ek function ko return karde
+
+```jsx
+function highFxn(para) {
+
+}
+
+highFxn(function () { })
+```
+
+```jsx
+function highFxn1() {
+    return function () {
+
+    }
+}
+```
+
+```jsx
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+arr.forEach(function () { })
+```
+
+## 29. try - catch
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/1163cc1b-2e0b-4fcc-b6df-5b06ec3865aa/d6a9b417-2cf9-4197-b734-e1b9a55c8487/Untitled.png)
+
+## 30. Custom Event
+
+- events, click, dblclick, mouseover, input
+- How
+
+    1. make event
+    2. attach event to some dom element
+    3. dispatch that event from that dom element in which you attached the event
+
+```jsx
+**const evt = new Event("customEvt");
+
+document.querySelector("button")
+    .addEventListener("customEvt", function () {
+        alert("custom event ");
+    })
+
+document.querySelector("button").dispatchEvent(evt);**
+```
+
