@@ -30,13 +30,13 @@ console.warn("Sandeep Patel");
 console.erro("Sandeep Patel");
 ```
 
-1. alert
+2. alert
 
 ```jsx
 alert(" hely");
 ```
 
-1. prompt
+3. prompt
 
 ```jsx
 // prompt alert ka bhai hai jo ki alert se ek kadam aage hai
@@ -187,7 +187,7 @@ console.log(typeof undefined); // undefined
 console.log(typeof null); // object
 ```
 
-1. DataTypes Conversions && Operations IN JS
+2. DataTypes Conversions && Operations IN JS
 
 ```jsx
 // DataTypes Conversion && Operation
@@ -318,7 +318,7 @@ console.log(false || 7 || false);
 // let f = (a + (b * d) / e);
 ```
 
-1. Comparison 
+3. Comparison 
 
 ```jsx
 console.log(2 > 1);
@@ -343,7 +343,7 @@ console.log(undefined < 0);
 console.log("2" === 2);
 ```
 
-1. DataTypes - Summary 
+4. DataTypes - Summary 
 
 ```jsx
 //  Primitive - call by value
@@ -910,7 +910,7 @@ if (loggedInFromGoogle || loggedInFromEmail) {
 }
 ```
 
-1. Switch Case
+2. Switch Case
 
 ```jsx
 // switch case
@@ -972,7 +972,7 @@ switch (month) {
 }
 ```
 
-1. Truthy && Falsy Values
+3. Truthy && Falsy Values
 
 ```jsx
 // falsy values
@@ -1005,7 +1005,7 @@ if (Object.keys(emptyObj).length === 0) {
 }
 ```
 
-1. Nullish Coalescing Operator (??): null undefined
+4. Nullish Coalescing Operator (??): null undefined
 
 ```jsx
 let val1;
@@ -1074,7 +1074,7 @@ for (let index = 0; index < myArray.length; index++) {
 }
 ```
 
-1. Break and Continue
+2. Break and Continue
 
 ```jsx
 // break and continue
@@ -1096,7 +1096,7 @@ for (let index = 1; index <= 20; index++) {
 }
 ```
 
-1. while loop
+3. while loop
 
 ```jsx
 let index = 0;
@@ -1116,7 +1116,7 @@ while (arr < myArray1.length) {
 }
 ```
 
-1. do-while Loop
+4. do-while Loop
 
 ```jsx
 // let score = 10;
@@ -1943,7 +1943,7 @@ conditions ko seekh jaao to this ko samajh jaaoge
 console.log(this);
 ```
 
-1. function → window
+2. function → window
 
 ```jsx
 function sand(){
@@ -1953,7 +1953,7 @@ function sand(){
 sand();
 ```
 
-1. method → object
+3. method → object
 
 ```jsx
 var obj = {
@@ -1968,7 +1968,7 @@ email: "sand@gmail.com"
 obj.name();
 ```
 
-1. function inside method (ES5) → window
+4. function inside method (ES5) → window
 
 ```jsx
 var obj2 = {
@@ -1988,7 +1988,7 @@ age: 25
 obj2.sayName();
 ```
 
-1. function inside method (ES6) →object
+5. function inside method (ES6) →object
 
 ```jsx
 var obj2 = {
@@ -2018,7 +2018,7 @@ var obj3 = {
 obj3.sayName();
 ```
 
-1. constructor function mein this ki value → new blank object
+6. constructor function mein this ki value → new blank object
 
 ```jsx
 function add(){
@@ -2028,7 +2028,7 @@ function add(){
 const ans = new add();
 ```
 
-1. event listener mein this ki value → that element jispar event listener laga ho
+7. event listener mein this ki value → that element jispar event listener laga ho
 
 ```jsx
 document.querySelector("button")
@@ -2068,7 +2068,7 @@ function abcd(a, b, c) {
 abcd.apply(obj, [2, 4, 6]) 
 ```
 
-1. bind → bind function ko chalata nhi he ek aur function deta he retuen karke jisko ham baad me chala skte he
+3. bind → bind function ko chalata nhi he ek aur function deta he retuen karke jisko ham baad me chala skte he
 ```jsx
 const obj = { name: "Sandy" }
 
