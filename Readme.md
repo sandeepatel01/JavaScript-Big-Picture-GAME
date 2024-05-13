@@ -2080,3 +2080,35 @@ const bindFxn = abcd.bind(obj);
 
 bindFxn()
 ```
+
+
+## 25. Prototypal inheritance
+
+- hum objects create karte hai and kisi ek parent constructor function ke prototype mein kuchh add kr dete hai and jab bhi add hota hai to wo parent se banne waale sabhi children instances ko wo properties jo parent ko prototype mein di gayi thi wo milti hai saugaat mein.
+
+```jsx
+function makeHuman() {
+    this.name = "Sandy";
+    this.age = 22;
+
+}
+
+//  OR 
+
+function makeHuman(name, age) {
+    this.name = name;
+    this.age = age;
+
+}
+
+let human = makeHuman1("Sandy", 22); 
+let human1 = makeHuman1("Sam", 21);
+
+```
+
+- ek function jo ki this ka upyog kar raha ho and new ke dwaara
+naye naye obejcts bana kar deta ho aise function ko constructor
+function kahte hai
+- aisa koi bhi function jismein aap this ka upyog kar rhe ho aur
+us function ko call karte waqt aap new ka upypog karein, to new ka
+matlab waha par ek blank object hojaata hai
