@@ -7,8 +7,8 @@
                           naye features, puraane hatana, kharaab features sahi
                           arna and overall development of js.
 
-- JS the language  =  code likhna seekhna, main features
-- JS the dom  =  code likhkar cheejein banana seekhna
+- JS the language = code likhna seekhna, main features
+- JS the dom = code likhkar cheejein banana seekhna
 
 ## 2. Basics
 
@@ -19,6 +19,7 @@
 ## 3. Inbuilt features
 
 - Browser Inbuild
+
 1. console
 
 ```jsx
@@ -45,7 +46,7 @@ prompt("hello");
 
 ## 4. Variables & constants
 
-- har programming lang mein data se deal karna hota hai, wo alag alag prakaar ka data ho sakta  hai, ab aisa data jisse humein deal karna hai, wo save to krna padega na, to wo data save krne ke 1 iye hume koi saving space chahiye jaha par data save hojaayel and ye save krne ke liye unhe kuchh naam bhi dena padega and isiliye humein variables and constants banaane padte hai taaki data save hojaae and unka koi naam bhi ho taaki hum baad mein unhe access kar paaye
+- har programming lang mein data se deal karna hota hai, wo alag alag prakaar ka data ho sakta hai, ab aisa data jisse humein deal karna hai, wo save to krna padega na, to wo data save krne ke 1 iye hume koi saving space chahiye jaha par data save hojaayel and ye save krne ke liye unhe kuchh naam bhi dena padega and isiliye humein variables and constants banaane padte hai taaki data save hojaae and unka koi naam bhi ho taaki hum baad mein unhe access kar paaye
 - variables and constants hote hai data store krne ke liye and variables mein data store hota hai and change bhi hojaata hai and constants mein data store and change nahi hota and dono hi browser par memory lete hai and browser RAM par chalta hai to technically dono RAM par chalte hai ya fir space lete hai
 
 ```jsx
@@ -98,7 +99,7 @@ console.table([
 - JS language english words use krti hai and computers english nahi samjhte, wo samajhte hai 0 and 1 jisko current flow and current bypass bhi kah skte ho, and hum chaahte hai hum english mein likhke comp se baat krle, to hum ek translator lagaayege jo ki humara code english mein lega and use 0 and 1 mein convert kr dega,
 - compiler and interpreter translators hai jo ki english code ko convert kr rhe hai machine code mein, JS mein interpreter hota hai
 - java - compiler
-- jit compiler[ dev by → google ]  - interpreter ki shuraati taakat use krta hai and compiler ki running taakat use krta hai
+- jit compiler[ dev by → google ] - interpreter ki shuraati taakat use krta hai and compiler ki running taakat use krta hai
 
 ## 6. Window
 
@@ -108,6 +109,7 @@ console.table([
 ## 7. Types
 
 - Types - primitive DT I I reference DT
+
 1. 12, a, 12.4, harsh, true, null, undefined → Primitive DT
 2. [ ], ( ), { } → reference DT
 
@@ -318,7 +320,7 @@ console.log(false || 7 || false);
 // let f = (a + (b * d) / e);
 ```
 
-3. Comparison 
+3. Comparison
 
 ```jsx
 console.log(2 > 1);
@@ -343,7 +345,7 @@ console.log(undefined < 0);
 console.log("2" === 2);
 ```
 
-4. DataTypes - Summary 
+4. DataTypes - Summary
 
 ```jsx
 //  Primitive - call by value
@@ -574,7 +576,7 @@ newDate.toLocaleString("default", {
 
 ## 12. Arrays IN JS
 
-- What →  array mat lab jab bhi aapko ek ya ek se jaada value ek saath rakhni ho
+- What → array mat lab jab bhi aapko ek ya ek se jaada value ek saath rakhni ho
 
 ```jsx
 let users = ["Sandy", "Amit", "Aman", "Vicky", "Piyush"];
@@ -593,7 +595,7 @@ console.log(arr[0]);
 console.log(arr[3]);
 ```
 
-- Why → a lot of times the data is in the shape of  more than member, to contain all data altogether, we can  save it in an array
+- Why → a lot of times the data is in the shape of more than member, to contain all data altogether, we can save it in an array
 
 ```jsx
 // Arrays IN JS
@@ -678,7 +680,7 @@ console.log(Array.of(score1, score2, score3));
 
 - What → Object ek tareeka hai jisse ki hum ek identity ki details ko ek saath rakh skte hai
 - kai logo ka data = array[ ]
-- ek  bande ka  kai saara data  = object{ }
+- ek bande ka kai saara data = object{ }
 
 ```jsx
 let obj = {};
@@ -826,7 +828,7 @@ console.log(courseInstructor);
 - jab bhi aapko program mein decision lena ho, ki aage ka execution kaisa ho to waha par if else else-if use hota hai
 - truthy and falsy values
 - har value ko true ya false banaya jaa skta hai, ye depend krta hai, ki wo value ka type kya hai, agar wo value, truthy hai to true banegi and falsy hai to false
-- falsy values → null, undefined, NaN, 0, document.all,  false, “ ”, ‘ ’
+- falsy values → null, undefined, NaN, 0, document.all, false, “ ”, ‘ ’
 - truthy value → baaki sab truthy
 
 1. Else-If
@@ -1024,7 +1026,7 @@ val1 = null ?? undefined;
 ## 15. Loops
 
 - loops = repeat
-- for( 70% times used ),  while,  do-while,  foreach( 25% times used ),  forin,  forof
+- for( 70% times used ), while, do-while, foreach( 25% times used ), forin, forof
 
 ```jsx
 for(start, end, change) {
@@ -1143,7 +1145,6 @@ do {
 for (variable of iterable) {
   // code block to be executed
 }
-
 ```
 
 - **`variable`**: This is a variable that will represent each individual element or value in the iterable object during each iteration of the loop. You declare this variable before the **`of`** keyword.
@@ -1162,7 +1163,7 @@ for (const num of arr) {
 
 In this example, during each iteration of the loop, the variable **`num`** will take on the value of each element in the **`numbers`** array, one at a time. The loop will log each number to the console.
 
-One important thing to note about the **`for...of`** loop is that it iterates over the *values* of the iterable object, not its indices. This means you don't have direct access to the indices inside the loop. If you need access to indices, you would typically use a traditional **`for`** loop or the **`forEach()`** method for arrays.
+One important thing to note about the **`for...of`** loop is that it iterates over the _values_ of the iterable object, not its indices. This means you don't have direct access to the indices inside the loop. If you need access to indices, you would typically use a traditional **`for`** loop or the **`forEach()`** method for arrays.
 
 - iterating over the characters of a string:
 
@@ -1220,7 +1221,7 @@ The code you provided attempts to use a **`for...of`** loop to iterate over the 
 
 In JavaScript, the **`for...of`** loop is primarily used to iterate over iterable objects, such as arrays, strings, maps, sets, etc. Objects, on the other hand, do not implement the iterable protocol by default.
 
-If you want to iterate over the properties of an object, you typically use a **`for...in`** loop or **`Object.entries()`** method instead. 
+If you want to iterate over the properties of an object, you typically use a **`for...in`** loop or **`Object.entries()`** method instead.
 
 ### the **`for...of`** loop provides a convenient way to iterate over the values of iterable objects in JavaScript, making code more readable and concise when you don't need to work with indices.
 
@@ -1233,7 +1234,6 @@ If you want to iterate over the properties of an object, you typically use a **`
 for (variable in object) {
   // code to be executed
 }
-
 ```
 
 - **`variable`**: A variable that will be assigned to each property in the object on each iteration.
@@ -1263,279 +1263,229 @@ This code demonstrates the usage of a **`for...in`** loop in JavaScript to itera
 1. First, an object named **`myObject`** is defined, which contains key-value pairs where keys represent programming language abbreviations and values represent their corresponding full names.
 2. The **`for...in`** loop is used to iterate over the properties of the **`myObject`** object.
 3. Inside the loop:
-    - The **`const key`** variable is declared to represent each property/key of the **`myObject`** object in each iteration.
-    - Various actions are commented out:
-        - **`console.log(key);`**: This logs the current key (e.g., 'js', 'cpp', etc.) to the console.
-        - **`console.log(myObject[key]);`**: This logs the value corresponding to the current key to the console (e.g., 'javascript', 'C++', etc.).
-        - **`console.log(`**${key} shortcut is for ${myObject[key]}**`);`**: This logs a formatted string indicating the key and its corresponding value to the console (e.g., 'js shortcut is for javascript', 'cpp shortcut is for C++', etc.).
-        
-        ### In Array
-        
-        ```jsx
-        // forIn loop in Array
-        const programming = ["js", "rb", "py", "java", "cpp"];
-        
-        for (const key in programming) {
-          console.log(key);
-          // console.log(programming[key]);
-        }
-        ```
-        
-        This code attempts to use a **`for...in`** loop to iterate over the elements of an array named **`programming`**. However, using **`for...in`** loop with arrays in JavaScript is generally not recommended because it iterates over all enumerable properties of an object, including array indices, as well as properties inherited from the prototype chain. This can lead to unexpected behavior.
-        
-        Let's break down the code:
-        
-        1. An array named **`programming`** is defined, containing several programming language abbreviations.
-        2. The **`for...in`** loop is used to iterate over the indices (or keys) of the array.
-        
-        Inside the loop:
-        
-        - The **`const key`** variable is declared to represent each index of the array in each iteration.
-        - **`console.log(key);`** prints the current index to the console.
-        
-        However, using **`for...in`** loop with arrays in JavaScript may not produce the expected behavior, as it iterates over all enumerable properties, not just array elements. In this case, it will iterate over the indices of the array, but it's not guaranteed to iterate in numerical order, and it may also include properties inherited from the array's prototype.
-        
-        To iterate over the elements of an array in JavaScript, it's recommended to use a regular **`for`** loop, **`forEach()`** method, or other array iteration methods like **`map()`**, **`filter()`**, etc. Here's how you could iterate over the elements of the **`programming`** array using a regular **`for`** loop:
-        
-        ```jsx
-        for (let i = 0; i < programming.length; i++) {
-          console.log(programming[i]);
-        }
-        ```
-        
-        ### In map
-        
-        ```jsx
-        const map = new Map(); // not iterateble
-        map.set("IN", "India");
-        map.set("USA", "United States of America");
-        map.set("Fr", "France");
-        map.set("IN", "India");
-        
-        for (const key in map) {
-          console.log(key);
-        }
-        ```
-        
-        This code attempts to iterate over the properties of a Map object using a **`for...in`** loop. Let's break down the code:
-        
-        1. A Map object named **`map`** is created using the **`new Map()`** constructor. Map objects in JavaScript are collections of key-value pairs where both the keys and the values can be of any type.
-        2. Several key-value pairs are added to the Map using the **`set()`** method. It's worth noting that when setting a key that already exists in the Map, the previous value associated with that key will be replaced by the new one. In this case, the key **`'IN'`** is set twice with the value **`'India'`**, but only the last one will be stored.
-        3. The **`for...in`** loop is used to iterate over the properties of the **`map`** object.
-        
-        Inside the loop:
-        
-        - The **`const key`** variable is declared to represent each property/key of the **`map`** object in each iteration.
-        - **`console.log(key);`** prints the current property/key to the console.
-        
-        However, using **`for...in`** loop with Map objects in JavaScript is not recommended. The reason is that Map objects are not regular JavaScript objects, and their properties are not enumerable. The **`for...in`** loop in JavaScript is designed to iterate over the enumerable properties of an object, but Map objects do not have enumerable properties in the same sense as regular objects.
-        
-        If you want to iterate over the key-value pairs of a Map object, you can use methods provided by the Map object itself, such as **`forEach()`**:
-        
-        ```jsx
-        map.forEach((value, key) => {
-          console.log(key + ": " + value);
-        });
-        ```
-        
-        ### Here's an example of how you can use it:
-        
-        ```jsx
-        const person = {
-          firstName: "John",
-          lastName: "Doe",
-          age: 30,
-        };
-        
-        for (let key in person) {
-          console.log(key + ": " + person[key]);
-        }
-        ```
-        
-        This will output:
-        
-        ```jsx
-        firstName: John;
-        lastName: Doe;
-        age: 30;
-        ```
-        
-        However, it's important to note that **`for...in`** loop iterates over all enumerable properties, including those inherited from the object's prototype chain. If you only want to iterate over an object's own properties, you should use **`hasOwnProperty()`** method to check if the property belongs to the object itself:
-        
-        ```jsx
-        for (let key in person) {
-          if (person.hasOwnProperty(key)) {
-            console.log(key + ': ' + person[key]);
-          }
-        }
-        
-        ```
-        
-        This will only output the object's own properties:
-        
-        ```jsx
-        firstName: John;
-        lastName: Doe;
-        age: 30;
-        ```
-        
-        ## 3. forEach loop
-        
-        - In JavaScript, the **`forEach()`** method is used to iterate over elements in an array. It executes a provided function once for each array element.
-        - The syntax looks like this:
-        
-        ```jsx
-        array.forEach(function (currentValue, index, array) {
-          // Do something with currentValue
-        });
-        ```
-        
-        - **`currentValue`**: The current element being processed in the array.
-        - **`index`** (optional): The index of the current element being processed in the array.
-        - **`array`** (optional): The array **`forEach()`** was called upon.
-        
-        Here's a simple example of how you can use **`forEach()`**:
-        
-        - Using Array
-        
-        ```jsx
-        const coding = ["js", "ruby", "java", "python", "cpp"];
-        
-        coding.forEach(function (val) {
-          //is callback function -> callback function ka name nahi hota
-          console.log(val);
-        });
-        ```
-        
-        1. **`const coding = ["js", "ruby", "java", "python", "cpp"]`**: This line declares a constant variable **`coding`** and assigns it an array containing strings representing programming languages.
-        2. **`coding.forEach(function(val) { ... });`**: This line invokes the **`forEach()`** method on the **`coding`** array. The **`forEach()`** method takes a function as an argument, which will be called for each element in the array.
-        3. **`function(val) { console.log(val); }`**: This is the function being passed as an argument to **`forEach()`**. It is an anonymous function (meaning it has no name), and it takes one parameter, **`val`**, which represents the current element being iterated over in the array. Inside this function, **`console.log(val)`** prints each element of the array to the console.
-        
-        So, when this code runs, it will print each programming language in the **`coding`** array to the console, one by one. The output will be:
-        
-        ```jsx
-        js;
-        ruby;
-        java;
-        python;
-        cpp;
-        ```
-        
-        ```jsx
-        const coding = ["js", "ruby", "java", "python", "cpp"];
-        
-        coding.forEach((item) => {
-          console.log(item);
-        });
-        ```
-        
-        1. **`const coding = ["js", "ruby", "java", "python", "cpp"];`**: This line initializes a constant variable **`coding`** and assigns it an array containing strings representing programming languages.
-        2. **`coding.forEach((item) => { console.log(item); });`**: The **`forEach()`** method is called on the **`coding`** array. It takes a callback function as an argument. In this case, an arrow function is used as the callback. The arrow function takes one parameter, **`item`**, which represents the current element being iterated over in the array. Inside the arrow function, **`console.log(item)`** is called, which prints each element of the array to the console.
-            - **`(item) => { console.log(item); }`**: This is the arrow function used as the callback for **`forEach()`**. It takes one parameter, **`item`**, and logs it to the console using **`console.log()`**.
-        
-        ```docker
-        const coding = ["js", "ruby", "java", "python", "cpp"];
-        
-        function printMe(item) {
-          console.log(item);
-        }
-        coding.forEach(printMe); // printme function pass as a referance
-        ```
-        
-        1. **`const coding = ["js", "ruby", "java", "python", "cpp"];`**: This line initializes a constant variable **`coding`** and assigns it an array containing strings representing programming languages.
-        2. **`function printMe(item) { console.log(item); }`**: This is a named function **`printMe`** that takes one parameter **`item`** and logs it to the console.
-        3. **`coding.forEach(printMe);`**: The **`forEach()`** method is called on the **`coding`** array. It takes a callback function as an argument. In this case, the **`printMe`** function is passed as a reference to **`forEach()`**. This means that for each element in the **`coding`** array, the **`printMe`** function will be called with the current element as an argument
-        
-         the **`forEach()`** method iterates over each element in the **`coding`** array, and for each element, it calls the **`printMe`** function, passing the current element as an argument. The **`printMe`** function then logs each element to the console.
-        
-        When executed, this code will output:
-        
-        ```jsx
-        js
-        ruby
-        java
-        python
-        cpp
-        
-        ```
-        
-        - Using Object in Array
-        
-        ```jsx
-        const myCoding = [
-          {
-            languageName: "javascript",
-            languageFileName: "js",
-          },
-          {
-            languageName: "java",
-            languageFileName: "java",
-          },
-          {
-            languageName: "python",
-            languageFileName: "py",
-          },
-        ];
-        
-        myCoding.forEach((item) => {
-          // console.log(item);
-          // console.log(item.languageName);
-          console.log(item.languageFileName);
-        });
-        ```
-        
-        1. **`const myCoding = [...]`**: This line initializes a constant variable **`myCoding`** and assigns it an array containing objects. Each object represents a programming language and has two properties: **`languageName`** and **`languageFileName`**.
-        2. **`myCoding.forEach((item) => { ... });`**: The **`forEach()`** method is called on the **`myCoding`** array. It takes a callback function as an argument. In this case, an arrow function is used as the callback. The arrow function takes one parameter, **`item`**, which represents the current element being iterated over in the array.
-        3. **`console.log(item.languageFileName);`**: Inside the arrow function, **`console.log(item.languageFileName)`** is called. This accesses the **`languageFileName`** property of each object (**`item`**) in the **`myCoding`** array and logs it to the console
-        
-        ```jsx
-        const coding = ["js", "ruby", "java", "python", "cpp"];
-        
-        // const values = coding.forEach( (item) => {
-        //     console.log(item);
-        // } )
-        // console.log("Valeu:", values);
-        
-        const values = coding.forEach((item) => {
-          console.log(item);
-          return item;
-        }); // forEach no return value
-        
-        console.log(values);
-        ```
-        
-    1. **`const coding = ["js", "ruby", "java", "python", "cpp"];`**: This line initializes a constant variable **`coding`** and assigns it an array containing strings representing programming languages.
-    2. **`const values = coding.forEach((item) => { ... });`**: The **`forEach()`** method is called on the **`coding`** array. It takes a callback function as an argument. In this case, an arrow function is used as the callback. The arrow function takes one parameter, **`item`**, which represents the current element being iterated over in the array.
-    3. **`console.log(item);`**: Inside the arrow function, **`console.log(item)`** is called, which prints each element of the array to the console.
-    4. **`return item;`**: This line attempts to return the current element **`item`** within the callback function. However, it's important to note that the **`forEach()`** method doesn't return any value. Even if you try to return something from within the callback function, it won't affect the **`forEach()`** method itself.
-    5. **`const values = ...`**: This line declares a constant variable **`values`** and attempts to assign the return value of the **`forEach()`** method to it. However, since **`forEach()`** doesn't return anything, the value of **`values`** will be **`undefined`**.
-    6. **`console.log(values);`**: Finally, **`console.log(values)`** prints the value of **`values`** to the console, which is **`undefined`**.
-    
-    So, when this code is executed, it will print each programming language in the **`coding`** array to the console and then print **`undefined`** because the **`forEach()`** method doesn't return any value. The output will be:
-    
-    ```jsx
-    js;
-    ruby;
-    java;
-    python;
-    cpp;
-    undefined;
-    ```
-    
+
+   - The **`const key`** variable is declared to represent each property/key of the **`myObject`** object in each iteration.
+   - Various actions are commented out:
+     - **`console.log(key);`**: This logs the current key (e.g., 'js', 'cpp', etc.) to the console.
+     - **`console.log(myObject[key]);`**: This logs the value corresponding to the current key to the console (e.g., 'javascript', 'C++', etc.).
+     - **`console.log(`**${key} shortcut is for ${myObject[key]}**`);`**: This logs a formatted string indicating the key and its corresponding value to the console (e.g., 'js shortcut is for javascript', 'cpp shortcut is for C++', etc.).
+     ### In Array
+     ```jsx
+     // forIn loop in Array
+     const programming = ["js", "rb", "py", "java", "cpp"];
+
+     for (const key in programming) {
+       console.log(key);
+       // console.log(programming[key]);
+     }
+     ```
+     This code attempts to use a **`for...in`** loop to iterate over the elements of an array named **`programming`**. However, using **`for...in`** loop with arrays in JavaScript is generally not recommended because it iterates over all enumerable properties of an object, including array indices, as well as properties inherited from the prototype chain. This can lead to unexpected behavior.
+     Let's break down the code:
+     1. An array named **`programming`** is defined, containing several programming language abbreviations.
+     2. The **`for...in`** loop is used to iterate over the indices (or keys) of the array.
+     Inside the loop:
+     - The **`const key`** variable is declared to represent each index of the array in each iteration.
+     - **`console.log(key);`** prints the current index to the console.
+     However, using **`for...in`** loop with arrays in JavaScript may not produce the expected behavior, as it iterates over all enumerable properties, not just array elements. In this case, it will iterate over the indices of the array, but it's not guaranteed to iterate in numerical order, and it may also include properties inherited from the array's prototype.
+     To iterate over the elements of an array in JavaScript, it's recommended to use a regular **`for`** loop, **`forEach()`** method, or other array iteration methods like **`map()`**, **`filter()`**, etc. Here's how you could iterate over the elements of the **`programming`** array using a regular **`for`** loop:
+     ```jsx
+     for (let i = 0; i < programming.length; i++) {
+       console.log(programming[i]);
+     }
+     ```
+     ### In map
+     ```jsx
+     const map = new Map(); // not iterateble
+     map.set("IN", "India");
+     map.set("USA", "United States of America");
+     map.set("Fr", "France");
+     map.set("IN", "India");
+
+     for (const key in map) {
+       console.log(key);
+     }
+     ```
+     This code attempts to iterate over the properties of a Map object using a **`for...in`** loop. Let's break down the code:
+     1. A Map object named **`map`** is created using the **`new Map()`** constructor. Map objects in JavaScript are collections of key-value pairs where both the keys and the values can be of any type.
+     2. Several key-value pairs are added to the Map using the **`set()`** method. It's worth noting that when setting a key that already exists in the Map, the previous value associated with that key will be replaced by the new one. In this case, the key **`'IN'`** is set twice with the value **`'India'`**, but only the last one will be stored.
+     3. The **`for...in`** loop is used to iterate over the properties of the **`map`** object.
+     Inside the loop:
+     - The **`const key`** variable is declared to represent each property/key of the **`map`** object in each iteration.
+     - **`console.log(key);`** prints the current property/key to the console.
+     However, using **`for...in`** loop with Map objects in JavaScript is not recommended. The reason is that Map objects are not regular JavaScript objects, and their properties are not enumerable. The **`for...in`** loop in JavaScript is designed to iterate over the enumerable properties of an object, but Map objects do not have enumerable properties in the same sense as regular objects.
+     If you want to iterate over the key-value pairs of a Map object, you can use methods provided by the Map object itself, such as **`forEach()`**:
+     ```jsx
+     map.forEach((value, key) => {
+       console.log(key + ": " + value);
+     });
+     ```
+     ### Here's an example of how you can use it:
+     ```jsx
+     const person = {
+       firstName: "John",
+       lastName: "Doe",
+       age: 30,
+     };
+
+     for (let key in person) {
+       console.log(key + ": " + person[key]);
+     }
+     ```
+     This will output:
+     ```jsx
+     firstName: John;
+     lastName: Doe;
+     age: 30;
+     ```
+     However, it's important to note that **`for...in`** loop iterates over all enumerable properties, including those inherited from the object's prototype chain. If you only want to iterate over an object's own properties, you should use **`hasOwnProperty()`** method to check if the property belongs to the object itself:
+     ```jsx
+     for (let key in person) {
+       if (person.hasOwnProperty(key)) {
+         console.log(key + ": " + person[key]);
+       }
+     }
+     ```
+     This will only output the object's own properties:
+     ```jsx
+     firstName: John;
+     lastName: Doe;
+     age: 30;
+     ```
+     ## 3. forEach loop
+     - In JavaScript, the **`forEach()`** method is used to iterate over elements in an array. It executes a provided function once for each array element.
+     - The syntax looks like this:
+     ```jsx
+     array.forEach(function (currentValue, index, array) {
+       // Do something with currentValue
+     });
+     ```
+     - **`currentValue`**: The current element being processed in the array.
+     - **`index`** (optional): The index of the current element being processed in the array.
+     - **`array`** (optional): The array **`forEach()`** was called upon.
+     Here's a simple example of how you can use **`forEach()`**:
+     - Using Array
+     ```jsx
+     const coding = ["js", "ruby", "java", "python", "cpp"];
+
+     coding.forEach(function (val) {
+       //is callback function -> callback function ka name nahi hota
+       console.log(val);
+     });
+     ```
+     1. **`const coding = ["js", "ruby", "java", "python", "cpp"]`**: This line declares a constant variable **`coding`** and assigns it an array containing strings representing programming languages.
+     2. **`coding.forEach(function(val) { ... });`**: This line invokes the **`forEach()`** method on the **`coding`** array. The **`forEach()`** method takes a function as an argument, which will be called for each element in the array.
+     3. **`function(val) { console.log(val); }`**: This is the function being passed as an argument to **`forEach()`**. It is an anonymous function (meaning it has no name), and it takes one parameter, **`val`**, which represents the current element being iterated over in the array. Inside this function, **`console.log(val)`** prints each element of the array to the console.
+     So, when this code runs, it will print each programming language in the **`coding`** array to the console, one by one. The output will be:
+     ```jsx
+     js;
+     ruby;
+     java;
+     python;
+     cpp;
+     ```
+     ```jsx
+     const coding = ["js", "ruby", "java", "python", "cpp"];
+
+     coding.forEach((item) => {
+       console.log(item);
+     });
+     ```
+     1. **`const coding = ["js", "ruby", "java", "python", "cpp"];`**: This line initializes a constant variable **`coding`** and assigns it an array containing strings representing programming languages.
+     2. **`coding.forEach((item) => { console.log(item); });`**: The **`forEach()`** method is called on the **`coding`** array. It takes a callback function as an argument. In this case, an arrow function is used as the callback. The arrow function takes one parameter, **`item`**, which represents the current element being iterated over in the array. Inside the arrow function, **`console.log(item)`** is called, which prints each element of the array to the console.
+        - **`(item) => { console.log(item); }`**: This is the arrow function used as the callback for **`forEach()`**. It takes one parameter, **`item`**, and logs it to the console using **`console.log()`**.
+     ```docker
+     const coding = ["js", "ruby", "java", "python", "cpp"];
+
+     function printMe(item) {
+       console.log(item);
+     }
+     coding.forEach(printMe); // printme function pass as a referance
+     ```
+     1. **`const coding = ["js", "ruby", "java", "python", "cpp"];`**: This line initializes a constant variable **`coding`** and assigns it an array containing strings representing programming languages.
+     2. **`function printMe(item) { console.log(item); }`**: This is a named function **`printMe`** that takes one parameter **`item`** and logs it to the console.
+     3. **`coding.forEach(printMe);`**: The **`forEach()`** method is called on the **`coding`** array. It takes a callback function as an argument. In this case, the **`printMe`** function is passed as a reference to **`forEach()`**. This means that for each element in the **`coding`** array, the **`printMe`** function will be called with the current element as an argument
+     the **`forEach()`** method iterates over each element in the **`coding`** array, and for each element, it calls the **`printMe`** function, passing the current element as an argument. The **`printMe`** function then logs each element to the console.
+     When executed, this code will output:
+     ```jsx
+     js;
+     ruby;
+     java;
+     python;
+     cpp;
+     ```
+     - Using Object in Array
+     ```jsx
+     const myCoding = [
+       {
+         languageName: "javascript",
+         languageFileName: "js",
+       },
+       {
+         languageName: "java",
+         languageFileName: "java",
+       },
+       {
+         languageName: "python",
+         languageFileName: "py",
+       },
+     ];
+
+     myCoding.forEach((item) => {
+       // console.log(item);
+       // console.log(item.languageName);
+       console.log(item.languageFileName);
+     });
+     ```
+     1. **`const myCoding = [...]`**: This line initializes a constant variable **`myCoding`** and assigns it an array containing objects. Each object represents a programming language and has two properties: **`languageName`** and **`languageFileName`**.
+     2. **`myCoding.forEach((item) => { ... });`**: The **`forEach()`** method is called on the **`myCoding`** array. It takes a callback function as an argument. In this case, an arrow function is used as the callback. The arrow function takes one parameter, **`item`**, which represents the current element being iterated over in the array.
+     3. **`console.log(item.languageFileName);`**: Inside the arrow function, **`console.log(item.languageFileName)`** is called. This accesses the **`languageFileName`** property of each object (**`item`**) in the **`myCoding`** array and logs it to the console
+     ```jsx
+     const coding = ["js", "ruby", "java", "python", "cpp"];
+
+     // const values = coding.forEach( (item) => {
+     //     console.log(item);
+     // } )
+     // console.log("Valeu:", values);
+
+     const values = coding.forEach((item) => {
+       console.log(item);
+       return item;
+     }); // forEach no return value
+
+     console.log(values);
+     ```
+
+   1. **`const coding = ["js", "ruby", "java", "python", "cpp"];`**: This line initializes a constant variable **`coding`** and assigns it an array containing strings representing programming languages.
+   2. **`const values = coding.forEach((item) => { ... });`**: The **`forEach()`** method is called on the **`coding`** array. It takes a callback function as an argument. In this case, an arrow function is used as the callback. The arrow function takes one parameter, **`item`**, which represents the current element being iterated over in the array.
+   3. **`console.log(item);`**: Inside the arrow function, **`console.log(item)`** is called, which prints each element of the array to the console.
+   4. **`return item;`**: This line attempts to return the current element **`item`** within the callback function. However, it's important to note that the **`forEach()`** method doesn't return any value. Even if you try to return something from within the callback function, it won't affect the **`forEach()`** method itself.
+   5. **`const values = ...`**: This line declares a constant variable **`values`** and attempts to assign the return value of the **`forEach()`** method to it. However, since **`forEach()`** doesn't return anything, the value of **`values`** will be **`undefined`**.
+   6. **`console.log(values);`**: Finally, **`console.log(values)`** prints the value of **`values`** to the console, which is **`undefined`**.
+
+   So, when this code is executed, it will print each programming language in the **`coding`** array to the console and then print **`undefined`** because the **`forEach()`** method doesn't return any value. The output will be:
+
+   ```jsx
+   js;
+   ruby;
+   java;
+   python;
+   cpp;
+   undefined;
+   ```
 
 ## 16. Functions
 
-- Types of JS  →  es5 and es6
+- Types of JS → es5 and es6
 - es5 [ function types ] - function statements, function expressions, anonymous function
-- es6 [ function types ]  - fat arrow function
+- es6 [ function types ] - fat arrow function
 
          a)  basic fat arrow
          b)  fat arrow with one param
          c) fat arrow with implicit return
 
 - functions - JS mein function normal programming language jaise nahi hai, iska mat lab hai, yaha par JS mein, functions banaane ke liye type nahi batana padta, Bas apko function word(keyword) likhna padega
-- indepth -  JS mein functions first class functions ka darja diya gaya hai, jiska matlab hai, ki JS mein  functions ko value/ variable ki tarah treat kiya jaa kta hai
-- what is function →  koi aisa code jo aapko baar baar use krna ho, ya fir koi aisa code jisko turant na chalana ho par kabhi  chalana ho, usey function mein daal skte hai
+- indepth - JS mein functions first class functions ka darja diya gaya hai, jiska matlab hai, ki JS mein functions ko value/ variable ki tarah treat kiya jaa kta hai
+- what is function → koi aisa code jo aapko baar baar use krna ho, ya fir koi aisa code jisko turant na chalana ho par kabhi chalana ho, usey function mein daal skte hai
 
 ```jsx
 function abcd() {
@@ -1563,9 +1513,9 @@ if (dateofbirth === todaysdate) {
 }
 ```
 
-- why we need →  to reuse code and to wrap the code which we want to run in future at some point of time
+- why we need → to reuse code and to wrap the code which we want to run in future at some point of time
 - how to use → function abcd(){ your code }
-- Extras we should know →  parameters and arguments
+- Extras we should know → parameters and arguments
 
 ```jsx
  function abcd(parameters(val) ) {
@@ -1584,8 +1534,8 @@ function abcd(){
 var abcd = function(){
     // function expression
   };
-  
-  
+
+
  function(){
     // anonymous function
 };
@@ -1764,12 +1714,12 @@ one();
 
 ```jsx
 if (true) {
-    const username = "sandeep"
-    if (username === "sandeep") {
-        const website = " youtube"
-        console.log(username + website);
-    }
-    console.log(website);
+  const username = "sandeep";
+  if (username === "sandeep") {
+    const website = " youtube";
+    console.log(username + website);
+  }
+  console.log(website);
 }
 
 console.log(username);
@@ -1879,7 +1829,7 @@ console.log(ans);
 
 ## 20. Undefined, Not define & Null
 
-- Undefined is a value → ye value tab di jaati hai jab variable ko koi value  naa mili ho, iska
+- Undefined is a value → ye value tab di jaati hai jab variable ko koi value naa mili ho, iska
 
       matlab hai, ye ek garbage value ki tarah treat ki jaati hai, aap isey default value bhi
        kah skte ho
@@ -1894,9 +1844,9 @@ let a;
 console.log(a);
 ```
 
-- null is also a value → 
-     *  this is a value which resolve like, not found
-     *  null is recieved when something is not found
+- null is also a value →
+  - this is a value which resolve like, not found
+  - null is recieved when something is not found
 
 ## 21. Loop with ARRAY
 
@@ -1928,14 +1878,13 @@ arr.forEach(function (val) {
 - Synchronous code mein code humesha line by line chalta hai
 - Async code line by line nahi chalta, saara async code ek saath shuru kar diya jaata hai and jo pahle complete hojaaye uska answer dedliya jaata hai.
 
-
 ## 23. This Keyword
 
 - this keyword js mein one of the most suspenseful keyword
 - keyword ka matlab hota hai aisa word jiska koi matlab ho programming
-lang mein
+  lang mein
 - this ki value baar baar badal sakti hai alag alag conditions mein, saari
-conditions ko seekh jaao to this ko samajh jaaoge
+  conditions ko seekh jaao to this ko samajh jaaoge
 
 1. global → window
 
@@ -1946,8 +1895,8 @@ console.log(this);
 2. function → window
 
 ```jsx
-function sand(){
-    console.log(this);
+function sand() {
+  console.log(this);
 }
 
 sand();
@@ -1957,13 +1906,13 @@ sand();
 
 ```jsx
 var obj = {
-name : function(){
+  name: function () {
     // console.log(this);
     console.log(this.age);
-},
-age: 25,
-email: "sand@gmail.com"
-}
+  },
+  age: 25,
+  email: "sand@gmail.com",
+};
 
 obj.name();
 ```
@@ -1972,18 +1921,18 @@ obj.name();
 
 ```jsx
 var obj2 = {
- sayName: function(){
+  sayName: function () {
     console.log(this.age);
-     function childfnc(){
-       console.log(this);
-    //    console.log(this.age);
-}
+    function childfnc() {
+      console.log(this);
+      //    console.log(this.age);
+    }
 
-childfnc();
-},
+    childfnc();
+  },
 
-age: 25
-}
+  age: 25,
+};
 
 obj2.sayName();
 ```
@@ -1992,17 +1941,17 @@ obj2.sayName();
 
 ```jsx
 var obj2 = {
- sayName: function(){
+  sayName: function () {
     console.log(this.age);
-const child = () => {
-    console.log(this);
-}
+    const child = () => {
+      console.log(this);
+    };
 
-child();
-},
+    child();
+  },
 
-age: 25
-}
+  age: 25,
+};
 
 obj2.sayName();
 ```
@@ -2010,10 +1959,10 @@ obj2.sayName();
 ```jsx
 // window
 var obj3 = {
-    sayName: ()=>{
-        console.log(this);
-    }
-}
+  sayName: () => {
+    console.log(this);
+  },
+};
 
 obj3.sayName();
 ```
@@ -2021,8 +1970,8 @@ obj3.sayName();
 6. constructor function mein this ki value → new blank object
 
 ```jsx
-function add(){
-    console.log(this);
+function add() {
+  console.log(this);
 }
 
 const ans = new add();
@@ -2031,94 +1980,92 @@ const ans = new add();
 7. event listener mein this ki value → that element jispar event listener laga ho
 
 ```jsx
-document.querySelector("button")
-.addEventListener("click", function(){
-    console.log(this);
-})
+document.querySelector("button").addEventListener("click", function () {
+  console.log(this);
+});
 ```
 
-## 24.  call apply & bind
+## 24. call apply & bind
 
 - ye teen tareeke hai function ko call karne ke kisi object ko this maan kar
+
 1. call
 
 ```jsx
-const obj = { name: "Sandy" }
+const obj = { name: "Sandy" };
 
 function abcd() {
-    console.log(this);
-};
+  console.log(this);
+}
 
-abcd() // this value -> window
+abcd(); // this value -> window
 
-abcd.call(12)  // this value -> number
-abcd.call("12")  // this value -> String
-abcd.call(obj)  // this value -> Onject
+abcd.call(12); // this value -> number
+abcd.call("12"); // this value -> String
+abcd.call(obj); // this value -> Onject
 ```
 
 2. apply
 
 ```jsx
-const obj = { name: "Sandy" }
+const obj = { name: "Sandy" };
 
 function abcd(a, b, c) {
-    console.log(this);
-};
+  console.log(this);
+}
 
-abcd.apply(obj, [2, 4, 6]) 
+abcd.apply(obj, [2, 4, 6]);
 ```
 
 3. bind → bind function ko chalata nhi he ek aur function deta he retuen karke jisko ham baad me chala skte he
+
 ```jsx
-const obj = { name: "Sandy" }
+const obj = { name: "Sandy" };
 
 function abcd(a, b, c) {
-    console.log(this);
-};
+  console.log(this);
+}
 
 const bindFxn = abcd.bind(obj);
 
-bindFxn()
+bindFxn();
 ```
+
 ## 25. Prototypal inheritance
 
 - hum objects create karte hai and kisi ek parent constructor function ke prototype mein kuchh add kr dete hai and jab bhi add hota hai to wo parent se banne waale sabhi children instances ko wo properties jo parent ko prototype mein di gayi thi wo milti hai saugaat mein.
 
 ```jsx
 function makeHuman() {
-    this.name = "Sandy";
-    this.age = 22;
-
+  this.name = "Sandy";
+  this.age = 22;
 }
 
-//  OR 
+//  OR
 
 function makeHuman(name, age) {
-    this.name = name;
-    this.age = age;
-
+  this.name = name;
+  this.age = age;
 }
 
-let human = makeHuman1("Sandy", 22); 
+let human = makeHuman1("Sandy", 22);
 let human1 = makeHuman1("Sam", 21);
-
 ```
 
 - ek function jo ki this ka upyog kar raha ho and new ke dwaara
-naye naye obejcts bana kar deta ho aise function ko constructor
-function kahte hai
+  naye naye obejcts bana kar deta ho aise function ko constructor
+  function kahte hai
 - aisa koi bhi function jismein aap this ka upyog kar rhe ho aur
-us function ko call karte waqt aap new ka upypog karein, to new ka
-matlab waha par ek blank object hojaata hai
+  us function ko call karte waqt aap new ka upypog karein, to new ka
+  matlab waha par ek blank object hojaata hai
 
 ```jsx
 function makeHuman1(name, age) {
-    this.name = name;
-    this.age = age;
-    this.printName = function () {
-        console.log(this.name);
-    }
-
+  this.name = name;
+  this.age = age;
+  this.printName = function () {
+    console.log(this.name);
+  };
 }
 
 let human = makeHuman1("Sandy", 22);
@@ -2130,9 +2077,8 @@ console.log(human1.printName);
 
 ```jsx
 function makeHuman(name, age) {
-    this.name = name;
-    this.age = age;
-
+  this.name = name;
+  this.age = age;
 }
 
 makeHuman.prototype.course = "BTech";
@@ -2147,14 +2093,13 @@ let human1 = makeHuman1("Sam", 21);
 - aisa koi bhi function jo ek aur function ko return karde, aur use kare parent function ka koi variable usey closure kahte hai
 
 ```jsx
-
 function counter() {
-    var count = 1;
+  var count = 1;
 
-    return function () {
-        count++;
-        console.log(count);
-    }
+  return function () {
+    count++;
+    console.log(count);
+  };
 }
 
 let fxn = counter();
@@ -2164,10 +2109,10 @@ console.log(fxn());
 
 ```jsx
 function timer() {
-    var a = 10;
-    return setTimeout(function () {
-        console.log(a);
-    }, 5000)
+  var a = 10;
+  return setTimeout(function () {
+    console.log(a);
+  }, 5000);
 }
 
 let time = timer();
@@ -2185,15 +2130,15 @@ console.log(time());
 var parent = document.querySelector("#parent");
 
 parent.addEventListener("click", function (details) {
-    // console.log(details);
-    // console.log(details.target);
+  // console.log(details);
+  // console.log(details.target);
 
-    if (details.target.id === "play") {
-        console.log("play song");
-    } else if (details.target.id === "pause") {
-        console.log("pause song");
-    }
-})
+  if (details.target.id === "play") {
+    console.log("play song");
+  } else if (details.target.id === "pause") {
+    console.log("pause song");
+  }
+});
 ```
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/1163cc1b-2e0b-4fcc-b6df-5b06ec3865aa/5727bcfc-8269-4392-8401-5f8188165163/Untitled.png)
@@ -2205,26 +2150,21 @@ parent.addEventListener("click", function (details) {
 - aisa koi fnc jo ki ek fnc ko parameter mein accept karle and/or ek function ko return karde
 
 ```jsx
-function highFxn(para) {
+function highFxn(para) {}
 
-}
-
-highFxn(function () { })
+highFxn(function () {});
 ```
 
 ```jsx
 function highFxn1() {
-    return function () {
-
-    }
+  return function () {};
 }
 ```
 
 ```jsx
-
 let arr = [1, 2, 3, 4, 5, 6, 7, 8];
 
-arr.forEach(function () { })
+arr.forEach(function () {});
 ```
 
 ## 29. try - catch
@@ -2236,9 +2176,9 @@ arr.forEach(function () { })
 - events, click, dblclick, mouseover, input
 - How
 
-    1. make event
-    2. attach event to some dom element
-    3. dispatch that event from that dom element in which you attached the event
+  1. make event
+  2. attach event to some dom element
+  3. dispatch that event from that dom element in which you attached the event
 
 ```jsx
 **const evt = new Event("customEvt");
@@ -2251,3 +2191,14 @@ document.querySelector("button")
 document.querySelector("button").dispatchEvent(evt);**
 ```
 
+# 31. JavaScript DOM
+
+- DOM = DOCUMENT OBJECT MODEL
+- JO BHI HUM WEBSITE PAR DEKHTE HAI WO SAB KUCHH BODY TAG KE ANDAR BANTA HAI , AB JO BODY MEIN BANTA HAI WAHI HUME-IN WEBSITE PAR DIKHTA HAI, DOM ACTUALLY HOTA HAI THODA ÅASAAN SHABDO MEIN HTML TAG AUR USKA POORA CONTROL JS MEIN
+- KABHI AAP CHAAHTE HO Kl AAP EK BUTTON KO CLICK KRKE EK DIV GAAYAB KARDE
+- html mein koi aisa feature nahi hai jo click ko handle kar sake
+- Aisi js jo aapke webpage par chhejo ko badal sake, us js ko hum perform kar skte hai DOM ke saath
+- Aisa js ka koi bhi code jo webpage mein kuchh bhi change karega wo js
+  ka DOM ka code kahlaayega
+
+### Dom manipulation => body mein kuchh bhi change karna ya manipulate karna actually dom manipulation kahlaata hai.
