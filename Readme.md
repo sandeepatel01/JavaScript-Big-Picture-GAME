@@ -1266,10 +1266,13 @@ This code demonstrates the usage of a **`for...in`** loop in JavaScript to itera
 
    - The **`const key`** variable is declared to represent each property/key of the **`myObject`** object in each iteration.
    - Various actions are commented out:
+
      - **`console.log(key);`**: This logs the current key (e.g., 'js', 'cpp', etc.) to the console.
      - **`console.log(myObject[key]);`**: This logs the value corresponding to the current key to the console (e.g., 'javascript', 'C++', etc.).
      - **`console.log(`**${key} shortcut is for ${myObject[key]}**`);`**: This logs a formatted string indicating the key and its corresponding value to the console (e.g., 'js shortcut is for javascript', 'cpp shortcut is for C++', etc.).
+
      ### In Array
+
      ```jsx
      // forIn loop in Array
      const programming = ["js", "rb", "py", "java", "cpp"];
@@ -1279,21 +1282,27 @@ This code demonstrates the usage of a **`for...in`** loop in JavaScript to itera
        // console.log(programming[key]);
      }
      ```
+
      This code attempts to use a **`for...in`** loop to iterate over the elements of an array named **`programming`**. However, using **`for...in`** loop with arrays in JavaScript is generally not recommended because it iterates over all enumerable properties of an object, including array indices, as well as properties inherited from the prototype chain. This can lead to unexpected behavior.
      Let's break down the code:
+
      1. An array named **`programming`** is defined, containing several programming language abbreviations.
      2. The **`for...in`** loop is used to iterate over the indices (or keys) of the array.
-     Inside the loop:
+        Inside the loop:
+
      - The **`const key`** variable is declared to represent each index of the array in each iteration.
      - **`console.log(key);`** prints the current index to the console.
-     However, using **`for...in`** loop with arrays in JavaScript may not produce the expected behavior, as it iterates over all enumerable properties, not just array elements. In this case, it will iterate over the indices of the array, but it's not guaranteed to iterate in numerical order, and it may also include properties inherited from the array's prototype.
-     To iterate over the elements of an array in JavaScript, it's recommended to use a regular **`for`** loop, **`forEach()`** method, or other array iteration methods like **`map()`**, **`filter()`**, etc. Here's how you could iterate over the elements of the **`programming`** array using a regular **`for`** loop:
+       However, using **`for...in`** loop with arrays in JavaScript may not produce the expected behavior, as it iterates over all enumerable properties, not just array elements. In this case, it will iterate over the indices of the array, but it's not guaranteed to iterate in numerical order, and it may also include properties inherited from the array's prototype.
+       To iterate over the elements of an array in JavaScript, it's recommended to use a regular **`for`** loop, **`forEach()`** method, or other array iteration methods like **`map()`**, **`filter()`**, etc. Here's how you could iterate over the elements of the **`programming`** array using a regular **`for`** loop:
+
      ```jsx
      for (let i = 0; i < programming.length; i++) {
        console.log(programming[i]);
      }
      ```
+
      ### In map
+
      ```jsx
      const map = new Map(); // not iterateble
      map.set("IN", "India");
@@ -1305,21 +1314,27 @@ This code demonstrates the usage of a **`for...in`** loop in JavaScript to itera
        console.log(key);
      }
      ```
+
      This code attempts to iterate over the properties of a Map object using a **`for...in`** loop. Let's break down the code:
+
      1. A Map object named **`map`** is created using the **`new Map()`** constructor. Map objects in JavaScript are collections of key-value pairs where both the keys and the values can be of any type.
      2. Several key-value pairs are added to the Map using the **`set()`** method. It's worth noting that when setting a key that already exists in the Map, the previous value associated with that key will be replaced by the new one. In this case, the key **`'IN'`** is set twice with the value **`'India'`**, but only the last one will be stored.
      3. The **`for...in`** loop is used to iterate over the properties of the **`map`** object.
-     Inside the loop:
+        Inside the loop:
+
      - The **`const key`** variable is declared to represent each property/key of the **`map`** object in each iteration.
      - **`console.log(key);`** prints the current property/key to the console.
-     However, using **`for...in`** loop with Map objects in JavaScript is not recommended. The reason is that Map objects are not regular JavaScript objects, and their properties are not enumerable. The **`for...in`** loop in JavaScript is designed to iterate over the enumerable properties of an object, but Map objects do not have enumerable properties in the same sense as regular objects.
-     If you want to iterate over the key-value pairs of a Map object, you can use methods provided by the Map object itself, such as **`forEach()`**:
+       However, using **`for...in`** loop with Map objects in JavaScript is not recommended. The reason is that Map objects are not regular JavaScript objects, and their properties are not enumerable. The **`for...in`** loop in JavaScript is designed to iterate over the enumerable properties of an object, but Map objects do not have enumerable properties in the same sense as regular objects.
+       If you want to iterate over the key-value pairs of a Map object, you can use methods provided by the Map object itself, such as **`forEach()`**:
+
      ```jsx
      map.forEach((value, key) => {
        console.log(key + ": " + value);
      });
      ```
+
      ### Here's an example of how you can use it:
+
      ```jsx
      const person = {
        firstName: "John",
@@ -1331,13 +1346,17 @@ This code demonstrates the usage of a **`for...in`** loop in JavaScript to itera
        console.log(key + ": " + person[key]);
      }
      ```
+
      This will output:
+
      ```jsx
      firstName: John;
      lastName: Doe;
      age: 30;
      ```
+
      However, it's important to note that **`for...in`** loop iterates over all enumerable properties, including those inherited from the object's prototype chain. If you only want to iterate over an object's own properties, you should use **`hasOwnProperty()`** method to check if the property belongs to the object itself:
+
      ```jsx
      for (let key in person) {
        if (person.hasOwnProperty(key)) {
@@ -1345,25 +1364,32 @@ This code demonstrates the usage of a **`for...in`** loop in JavaScript to itera
        }
      }
      ```
+
      This will only output the object's own properties:
+
      ```jsx
      firstName: John;
      lastName: Doe;
      age: 30;
      ```
+
      ## 3. forEach loop
+
      - In JavaScript, the **`forEach()`** method is used to iterate over elements in an array. It executes a provided function once for each array element.
      - The syntax looks like this:
+
      ```jsx
      array.forEach(function (currentValue, index, array) {
        // Do something with currentValue
      });
      ```
+
      - **`currentValue`**: The current element being processed in the array.
      - **`index`** (optional): The index of the current element being processed in the array.
      - **`array`** (optional): The array **`forEach()`** was called upon.
-     Here's a simple example of how you can use **`forEach()`**:
+       Here's a simple example of how you can use **`forEach()`**:
      - Using Array
+
      ```jsx
      const coding = ["js", "ruby", "java", "python", "cpp"];
 
@@ -1372,10 +1398,12 @@ This code demonstrates the usage of a **`for...in`** loop in JavaScript to itera
        console.log(val);
      });
      ```
+
      1. **`const coding = ["js", "ruby", "java", "python", "cpp"]`**: This line declares a constant variable **`coding`** and assigns it an array containing strings representing programming languages.
      2. **`coding.forEach(function(val) { ... });`**: This line invokes the **`forEach()`** method on the **`coding`** array. The **`forEach()`** method takes a function as an argument, which will be called for each element in the array.
      3. **`function(val) { console.log(val); }`**: This is the function being passed as an argument to **`forEach()`**. It is an anonymous function (meaning it has no name), and it takes one parameter, **`val`**, which represents the current element being iterated over in the array. Inside this function, **`console.log(val)`** prints each element of the array to the console.
-     So, when this code runs, it will print each programming language in the **`coding`** array to the console, one by one. The output will be:
+        So, when this code runs, it will print each programming language in the **`coding`** array to the console, one by one. The output will be:
+
      ```jsx
      js;
      ruby;
@@ -1383,6 +1411,7 @@ This code demonstrates the usage of a **`for...in`** loop in JavaScript to itera
      python;
      cpp;
      ```
+
      ```jsx
      const coding = ["js", "ruby", "java", "python", "cpp"];
 
@@ -1390,9 +1419,11 @@ This code demonstrates the usage of a **`for...in`** loop in JavaScript to itera
        console.log(item);
      });
      ```
+
      1. **`const coding = ["js", "ruby", "java", "python", "cpp"];`**: This line initializes a constant variable **`coding`** and assigns it an array containing strings representing programming languages.
      2. **`coding.forEach((item) => { console.log(item); });`**: The **`forEach()`** method is called on the **`coding`** array. It takes a callback function as an argument. In this case, an arrow function is used as the callback. The arrow function takes one parameter, **`item`**, which represents the current element being iterated over in the array. Inside the arrow function, **`console.log(item)`** is called, which prints each element of the array to the console.
         - **`(item) => { console.log(item); }`**: This is the arrow function used as the callback for **`forEach()`**. It takes one parameter, **`item`**, and logs it to the console using **`console.log()`**.
+
      ```docker
      const coding = ["js", "ruby", "java", "python", "cpp"];
 
@@ -1401,11 +1432,13 @@ This code demonstrates the usage of a **`for...in`** loop in JavaScript to itera
      }
      coding.forEach(printMe); // printme function pass as a referance
      ```
+
      1. **`const coding = ["js", "ruby", "java", "python", "cpp"];`**: This line initializes a constant variable **`coding`** and assigns it an array containing strings representing programming languages.
      2. **`function printMe(item) { console.log(item); }`**: This is a named function **`printMe`** that takes one parameter **`item`** and logs it to the console.
      3. **`coding.forEach(printMe);`**: The **`forEach()`** method is called on the **`coding`** array. It takes a callback function as an argument. In this case, the **`printMe`** function is passed as a reference to **`forEach()`**. This means that for each element in the **`coding`** array, the **`printMe`** function will be called with the current element as an argument
-     the **`forEach()`** method iterates over each element in the **`coding`** array, and for each element, it calls the **`printMe`** function, passing the current element as an argument. The **`printMe`** function then logs each element to the console.
-     When executed, this code will output:
+        the **`forEach()`** method iterates over each element in the **`coding`** array, and for each element, it calls the **`printMe`** function, passing the current element as an argument. The **`printMe`** function then logs each element to the console.
+        When executed, this code will output:
+
      ```jsx
      js;
      ruby;
@@ -1413,7 +1446,9 @@ This code demonstrates the usage of a **`for...in`** loop in JavaScript to itera
      python;
      cpp;
      ```
+
      - Using Object in Array
+
      ```jsx
      const myCoding = [
        {
@@ -1436,9 +1471,11 @@ This code demonstrates the usage of a **`for...in`** loop in JavaScript to itera
        console.log(item.languageFileName);
      });
      ```
+
      1. **`const myCoding = [...]`**: This line initializes a constant variable **`myCoding`** and assigns it an array containing objects. Each object represents a programming language and has two properties: **`languageName`** and **`languageFileName`**.
      2. **`myCoding.forEach((item) => { ... });`**: The **`forEach()`** method is called on the **`myCoding`** array. It takes a callback function as an argument. In this case, an arrow function is used as the callback. The arrow function takes one parameter, **`item`**, which represents the current element being iterated over in the array.
      3. **`console.log(item.languageFileName);`**: Inside the arrow function, **`console.log(item.languageFileName)`** is called. This accesses the **`languageFileName`** property of each object (**`item`**) in the **`myCoding`** array and logs it to the console
+
      ```jsx
      const coding = ["js", "ruby", "java", "python", "cpp"];
 
@@ -2202,3 +2239,106 @@ document.querySelector("button").dispatchEvent(evt);**
   ka DOM ka code kahlaayega
 
 ### Dom manipulation => body mein kuchh bhi change karna ya manipulate karna actually dom manipulation kahlaata hai.
+
+```jsx
+// ******** Promise Creation ********
+const promiseOne = new Promise(function (resolve, reject) {
+  //Do an async task
+  // DB calls, cryptography, network
+  setTimeout(function () {
+    console.log("Async task is compelete");
+    resolve();
+  }, 1000);
+});
+
+promiseOne.then(function () {
+  console.log("Promise consumed");
+});
+
+// ********** OR ********
+
+new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    console.log("Async task 2");
+    resolve();
+  }, 1000);
+}).then(function () {
+  console.log("Async 2 resolved");
+});
+
+const promiseThree = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    resolve({ username: "Chai", email: "code@example.com" });
+  }, 1000);
+});
+
+promiseThree.then(function (user) {
+  console.log(user);
+});
+
+const promiseFour = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    let error = true;
+    if (!error) {
+      resolve({ username: "sandy", password: "12345" });
+    } else {
+      reject("ERROR: Something went wrong");
+    }
+  }, 1000);
+});
+
+promiseFour
+  .then((user) => {
+    console.log(user);
+    return user.username;
+  })
+  .then((username) => {
+    console.log(username);
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+  .finally(() => console.log("The promise is either resolved or rejected"));
+
+const promiseFive = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    let error = true;
+    if (!error) {
+      resolve({ username: "javascript", password: "123" });
+    } else {
+      reject("ERROR: JS went wrong");
+    }
+  }, 1000);
+});
+
+async function consumePromiseFive() {
+  try {
+    const response = await promiseFive;
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
+}
+consumePromiseFive();
+
+// async function getAllUsers(){
+//     try {
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
+
+//         const data = await response.json()
+//         console.log(data);
+//     } catch (error) {
+//         console.log("E: ", error);
+//     }
+// }
+//getAllUsers()
+
+fetch("https://api.github.com/users/hiteshchoudhary")
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => console.log(error));
+```
