@@ -2364,3 +2364,78 @@ fetch("https://api.github.com/users/hiteshchoudhary")
   })
   .catch((error) => console.log(error));
 ```
+
+
+
+## 2. document.querySelector()
+
+- **`document.querySelector()`** is a method in JavaScript that allows you to select and retrieve the first element within the document that matches a specified CSS selector.
+- It belongs to the Document Object Model (DOM) API, which provides a structured representation of the document as a tree, allowing you to interact with and manipulate its elements.
+
+- Here's the basic syntax:
+
+```jsx
+document.querySelector(selector);
+```
+
+- **`selector`** is a string representing the CSS selector for the element you want to select.
+- This method returns the first element within the document that matches the specified selector, or null if no matches are found.
+
+→  example, if you have an HTML document like this:
+
+```jsx
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <p class="paragraph">This is the first paragraph.</p>
+        <p class="paragraph">This is the second paragraph.</p>
+
+        <label for="name">Name (4 to 8 characters):</label>
+        <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10" />
+
+        <ul>
+            <li class="list-item">One</li>
+            <li class="list-item">Two</li>
+            <li class="list-item">Three</li>
+            <li class="list-item">Four</li>
+        </ul>
+
+    </div>
+</body>
+</html>
+```
+
+You can use **`document.querySelector()`** to select the first paragraph element with the class "paragraph" like this:
+
+```jsx
+const firstParagraph = document.querySelector('.paragraph');
+console.log(firstParagraph); 
+console.log(firstParagraph.textContent); // Output: "This is the first paragraph."
+
+const ids = document.querySelector('#container');
+console.log(ids);
+
+const tags = document.querySelector('p');
+console.log(tags);
+
+const inputField = document.querySelector('input[type="text"]');
+console.log(inputField);
+
+const unOrderList = document.querySelector('ul');
+console.log(unOrderList);
+
+const list =  unOrderList.querySelector('li');
+console.log(list);
+
+list.innerText = "five";
+
+const changeCSSProps =  list.style.backgroundColor = 'green';
+console.log(changeCSSProps);
+
+```
+
+This method is particularly useful when you need to select elements by their class, ID, tag name, or any other CSS selector, and it simplifies DOM manipulation in JavaScript.
