@@ -2240,313 +2240,318 @@ document.querySelector("button").dispatchEvent(evt);**
 
 ### Dom manipulation => body mein kuchh bhi change karna ya manipulate karna actually dom manipulation kahlaata hai.
 
-## Document Object Model (DOM)
+### 1. Accessing Elements
 
-The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of HTML or XML documents as a tree-like model where each node corresponds to a part of the document (such as an element, attribute, or text).
+- Sabse pahle ek webpage banao
+- webpage kuchh elements banao
 
-Here's a breakdown of some key concepts related to the DOM in JavaScript:
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/1163cc1b-2e0b-4fcc-b6df-5b06ec3865aa/189f0423-6167-4438-a094-617018db9243/Untitled.png)
 
-1. **Document**: At the top of the DOM hierarchy is the **`document`** object, which represents the entire HTML document. It serves as the entry point to the DOM and provides methods and properties for interacting with the document.
-2. **Nodes**: Nodes are the building blocks of the DOM tree. There are several types of nodes, including element nodes, text nodes, attribute nodes, and more. Each node has various properties and methods for accessing and manipulating its content and attributes.
-3. **Elements**: Element nodes represent HTML elements in the DOM tree. They correspond to tags in the HTML document (e.g., **`<div>`**, **`<p>`**, **`<a>`**). Element nodes have properties like **`tagName`**, **`innerHTML`**, **`textContent`**, **`attributes`**, etc., and methods for manipulating them.
-4. **Attributes**: Attribute nodes represent attributes of HTML elements. They contain information about the element, such as its id, class, src, href, etc.
-5. **Methods for accessing elements**: There are several methods for accessing elements in the DOM:
-   - **`document.getElementById()`**: Retrieves an element by its id attribute.
-   - **`document.getElementsByClassName()`**: Retrieves elements by their class name.
-   - **`document.getElementsByTagName()`**: Retrieves elements by their tag name.
-   - **`document.querySelector()`**: Retrieves the first element that matches a specified CSS selector.
-   - **`document.querySelectorAll()`**: Retrieves all elements that match a specified CSS selector.
-6. **Traversal**: DOM traversal refers to navigating between nodes in the DOM tree. You can move from parent to child, sibling to sibling, or even navigate upwards in the tree.
-7. **Manipulation**: DOM manipulation involves changing the content, structure, or style of elements in the DOM. This includes methods like **`createElement()`**, **`appendChild()`**, **`removeChild()`**, **`setAttribute()`**, **`classList.add()`**, **`classList.remove()`**, etc.
-8. **Events**: DOM events are actions that occur as a result of user interaction or other actions. You can attach event listeners to DOM elements to respond to these events using methods like **`addEventListener()`**.
-9. **DOMContentLoaded event**: This event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading. It's often used to run JavaScript code that needs to access or manipulate the DOM.
-10. **Cross-browser compatibility**: While modern browsers generally adhere to the DOM standards, there might be slight differences in their implementations. It's important to consider cross-browser compatibility when working with the DOM.
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/1163cc1b-2e0b-4fcc-b6df-5b06ec3865aa/e026a7a4-a9b6-433a-b09a-a7bd3f854190/Untitled.png)
+
+- Selection
 
 ```jsx
-// ******** Promise Creation ********
-const promiseOne = new Promise(function (resolve, reject) {
-  //Do an async task
-  // DB calls, cryptography, network
-  setTimeout(function () {
-    console.log("Async task is compelete");
-    resolve();
-  }, 1000);
-});
+1.  document.getElementById
+2.  document.getElementsByClassName
+3.  document.getElementsByTagName
+4.  document.querySelectorAll
 
-promiseOne.then(function () {
-  console.log("Promise consumed");
-});
-
-// ********** OR ********
-
-new Promise(function (resolve, reject) {
-  setTimeout(function () {
-    console.log("Async task 2");
-    resolve();
-  }, 1000);
-}).then(function () {
-  console.log("Async 2 resolved");
-});
-
-const promiseThree = new Promise(function (resolve, reject) {
-  setTimeout(function () {
-    resolve({ username: "Chai", email: "code@example.com" });
-  }, 1000);
-});
-
-promiseThree.then(function (user) {
-  console.log(user);
-});
-
-const promiseFour = new Promise(function (resolve, reject) {
-  setTimeout(function () {
-    let error = true;
-    if (!error) {
-      resolve({ username: "sandy", password: "12345" });
-    } else {
-      reject("ERROR: Something went wrong");
-    }
-  }, 1000);
-});
-
-promiseFour
-  .then((user) => {
-    console.log(user);
-    return user.username;
-  })
-  .then((username) => {
-    console.log(username);
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
-  .finally(() => console.log("The promise is either resolved or rejected"));
-
-const promiseFive = new Promise(function (resolve, reject) {
-  setTimeout(function () {
-    let error = true;
-    if (!error) {
-      resolve({ username: "javascript", password: "123" });
-    } else {
-      reject("ERROR: JS went wrong");
-    }
-  }, 1000);
-});
-
-async function consumePromiseFive() {
-  try {
-    const response = await promiseFive;
-    console.log(response);
-  } catch (error) {
-    console.log(error);
-  }
-}
-consumePromiseFive();
-
-// async function getAllUsers(){
-//     try {
-//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
-
-//         const data = await response.json()
-//         console.log(data);
-//     } catch (error) {
-//         console.log("E: ", error);
-//     }
-// }
-//getAllUsers()
-
-fetch("https://api.github.com/users/hiteshchoudhary")
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => console.log(error));
+// Select All thinks
+document.querySelector
 ```
 
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/1163cc1b-2e0b-4fcc-b6df-5b06ec3865aa/f6df4c7d-5812-46e1-902c-05d2fc632533/Untitled.png)
 
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/1163cc1b-2e0b-4fcc-b6df-5b06ec3865aa/0ea77f3f-6900-4366-b31c-036a9ecc8780/Untitled.png)
 
-## 2. document.querySelector()
+- agar aapk paas baht saare h3 and aap select karte ho to srf pahla h3 select hogal
 
-- **`document.querySelector()`** is a method in JavaScript that allows you to select and retrieve the first element within the document that matches a specified CSS selector.
-- It belongs to the Document Object Model (DOM) API, which provides a structured representation of the document as a tree, allowing you to interact with and manipulate its elements.
-
-- Here's the basic syntax:
-
-```jsx
-document.querySelector(selector);
-```
-
-- **`selector`** is a string representing the CSS selector for the element you want to select.
-- This method returns the first element within the document that matches the specified selector, or null if no matches are found.
-
-→  example, if you have an HTML document like this:
-
-```jsx
+```html
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div id="container">
-        <p class="paragraph">This is the first paragraph.</p>
-        <p class="paragraph">This is the second paragraph.</p>
+  </head>
+  <body>
+    <button>Download</button>
 
-        <label for="name">Name (4 to 8 characters):</label>
-        <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10" />
+    <img src="" alt="" id="imageId" />
+    <img src="" alt="" class="imageClass" />
 
-        <ul>
-            <li class="list-item">One</li>
-            <li class="list-item">Two</li>
-            <li class="list-item">Three</li>
-            <li class="list-item">Four</li>
-        </ul>
+    <h3 id="headerId">Sandeep</h3>
+    <h3 class="headerClass">Sandy</h3>
 
-    </div>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
 ```
 
-You can use **`document.querySelector()`** to select the first paragraph element with the class "paragraph" like this:
-
 ```jsx
-const firstParagraph = document.querySelector('.paragraph');
-console.log(firstParagraph); 
-console.log(firstParagraph.textContent); // Output: "This is the first paragraph."
+// select & save html tag
+const btn = document.querySelector("button");
 
-const ids = document.querySelector('#container');
-console.log(ids);
+const imgID = document.querySelector("#imageId");
+const headerID = document.querySelector("#headerId");
 
-const tags = document.querySelector('p');
-console.log(tags);
-
-const inputField = document.querySelector('input[type="text"]');
-console.log(inputField);
-
-const unOrderList = document.querySelector('ul');
-console.log(unOrderList);
-
-const list =  unOrderList.querySelector('li');
-console.log(list);
-
-list.innerText = "five";
-
-const changeCSSProps =  list.style.backgroundColor = 'green';
-console.log(changeCSSProps);
-
+const imageClass = document.querySelector(".imageClass");
+const headerClass = document.querySelector(".headerClass");
 ```
 
-This method is particularly useful when you need to select elements by their class, ID, tag name, or any other CSS selector, and it simplifies DOM manipulation in JavaScript.
+### 2. Modifying Elements
 
+- kisi ko bhi change karne se pahle pahla step hota hai usko select karna
 
+1. textContent
 
-## 3. document.querySelectorAll()
-
-- **`document.querySelectorAll()`** is a JavaScript method used to select and retrieve a list of elements from the DOM (Document Object Model) that match a specified CSS selector.
-- It returns a NodeList, which is a collection of DOM elements that can be iterated over.
-
-- Here's an example of how to use it:
-
-```jsx
-// Select all <p> elements in the document
-const paragraphs = document.querySelectorAll('p');
-
-paragraphs[0].style.backgroundColor = 'green';
-
-// Iterate over the NodeList and do something with each <p> element
-paragraphs.forEach(paragraph => {
-    paragraphs.style.backgroundColor = 'green';
-    console.log(paragraph.textContent);
-});
-```
-
-**`document.querySelectorAll('p')`** selects all **`<p>`** elements in the document, and then we use **`forEach()`** to iterate over each paragraph and log its text content to the console
-
-## 4. document.getElementByClassName()
-
-- **`document.getElementsByClassName()`** is a method in the Document Object Model (DOM) API of JavaScript. Its purpose is to retrieve a collection of elements that have a specific class name within the document.
-- The syntax for **`document.getElementsByClassName()`** is as follows:
-
-```jsx
-var elements = document.getElementsByClassName(classNames);
-```
-
-**`classNames`**: This is a string representing one or more space-separated class names. It specifies the class or classes to look for in the document
-
-The method returns a live HTMLCollection of elements that match the specified class name(s). An HTMLCollection is an array-like object containing all the elements found, in the order they appear in the document.
-
-### **Example:**
-
-```jsx
+```html
 <!DOCTYPE html>
-<html>
-<head>
-    <title>getElementsByClassName Example</title>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <button>Download Now</button>
 
-<div class="exampleClass">Element 1</div>
-<div class="exampleClass">Element 2</div>
-<div class="exampleClass">Element 3</div>
-
-<script>
-    // Retrieve all elements with the class name "exampleClass"
-    var elements = document.getElementsByClassName("exampleClass");
-
-    // Loop through the collection and log each element's content
-    for (var i = 0; i < elements.length; i++) {
-        console.log(elements[i].textContent);
-    }
-   
-   const convertedArray = Array.from(elements);
-   convertedArray.forEach(tag => {
-    tag.style.color = 'blue';
-    console.log(tag.textContent);
-});
-
-</script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
 ```
 
-- We have three **`<div>`** elements, each having the class name "exampleClass".
-- We use **`document.getElementsByClassName("exampleClass")`** to retrieve all elements with the class name "exampleClass".
-- We then loop through the returned collection and log the text content of each element to the console.
+```jsx
+const btn = document.querySelector("button");
+btn.textContent = "Starting...";
 
-- If no elements match the specified class name(s), an empty HTMLCollection will be returned.
-- The class names passed to **`getElementsByClassName()`** must match exactly the class attribute values of the elements. It does not work with partial matches or wildcards.
-- The returned HTMLCollection is live, meaning if elements are added, removed, or their class names changed dynamically in the document, the collection automatically updates to reflect those changes
+const header = document.querySelector("h1");
+// header.textContent = "I am gonna change the thing."
+header.textContent += " Sandy";
+```
 
-## NodeList
+1. innerHTML
 
-- **`nodeList`** in the DOM (Document Object Model) is a collection of nodes, typically returned by methods like **`querySelectorAll()`** or properties like **`childNodes`**. A **`nodeList`** is similar to an array, but it is not an array; it is a "live" collection of DOM elements or nodes that dynamically reflects changes made to the DOM.
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
 
-- some key points about **`nodeList`**:
-1. **Collection of Nodes**: A **`nodeList`** is an ordered collection of nodes. These nodes can be elements, text nodes, comments, etc., found within a specific portion of the DOM.
-2. **Zero-based Indexing**: Like arrays, you can access individual items in a **`nodeList`** using zero-based indexing.
-3. **Not an Array**: Although **`nodeList`** objects look and behave like arrays, they are not actual arrays. They lack some array methods like **`forEach()`**, **`map()`**, etc., although you can often use these methods on them by converting them to arrays.
-4. **Live Collection**: A **`nodeList`** is "live," meaning it is automatically updated when the DOM changes. If elements are added, removed, or modified in the DOM that match the selector used to create the **`nodeList`**, the **`nodeList`** is automatically updated to reflect these changes.
-5. **Static NodeList**: Some collections, like those returned by **`querySelectorAll()`**, are static **`nodeList`**s. This means they do not update when the DOM changes. They represent a snapshot of the DOM at the time of the query.
-
-- Example:
+    <script src="script.js"></script>
+  </body>
+</html>
+```
 
 ```jsx
-// Selecting all <p> elements in the document
-const paragraphs = document.querySelectorAll('p');
+const header = document.querySelector("h1");
+// header.innerHTML = '<i>Hello Sandy</i>';
+header.innerHTML += "<i> Sandy</i>";
+```
 
-// Iterating through the nodeList
-paragraphs.forEach(paragraph => {
-    console.log(paragraph.textContent);
+### 3. Manipulating Styles and Classes
+
+1. style
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+
+```jsx
+const header = document.querySelector("h1");
+header.innerHTML += "<i> Sandy</i>";
+
+header.style.color = "green";
+header.style.fontFamily = "gilroy";
+```
+
+1. classList
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="stle.css" />
+  </head>
+  <body>
+    <h1>Hello</h1>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+
+```css
+.makeitblue {
+  color: blue;
+  font-family: "gilroy";
+}
+```
+
+```jsx
+const header = document.querySelector("h1");
+header.classList.add("makeitblue");
+header.classList.remove("makeitblue");
+```
+
+### 4. Creating and Deleting Elements
+
+1. createElement()
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="stle.css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+
+```css
+.makeitblue {
+  color: blue;
+  font-family: "gilroy";
+}
+```
+
+```jsx
+const createHeader = document.createElement("h1");
+createHeader.textContent = "Hello";
+createHeader.classList.add("makeitblue");
+```
+
+1. appendChild()
+
+```jsx
+const createHeader = document.createElement("h1");
+createHeader.textContent = "Hello";
+createHeader.classList.add("makeitblue");
+
+document.querySelector("body").appendChild(createHeader);
+```
+
+```jsx
+const img = document.createElement("img");
+img.src =
+  "https://images.unsplash.com/photo-1718964382789-57b24c5c4b97?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+
+document.querySelector("body").appendChild(img);
+```
+
+1. removeChild()
+
+```jsx
+const img = document.createElement("img");
+img.src =
+  "https://images.unsplash.com/photo-1718964382789-57b24c5c4b97?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+
+const appendImage = document.querySelector("body").appendChild(img);
+appendImage.remove();
+```
+
+### 5. Event Handling
+
+- jab bhi aap kisi element par kisi bhi prakaar ka koi action krte ho to waha par event by default automatically raise hota hai ab agar aapne koi pvent listener nahi banaya hai to wo event ignore krdiya jaata hai par agar aapne listener banaya hai us event par to wo event
+  ignore nahi kiya jaayega balki uska listener chalega
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/1163cc1b-2e0b-4fcc-b6df-5b06ec3865aa/67a0ca41-794a-4e41-b32d-4f65cf66c265/Untitled.png)
+
+- addEventListener()
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="stle.css" />
+  </head>
+  <body>
+    <button>Download</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+
+```jsx
+const btn = document.querySelector("button");
+
+btn.addEventListener("click", function () {
+  btn.textContent = "Starting......";
+  btn.style.backgroundColor = "blue";
+});
+```
+
+```jsx
+const btn = document.querySelector("button");
+
+btn.addEventListener("dblclick", function () {
+  btn.textContent = "Starting......";
+  btn.style.backgroundColor = "blue";
+});
+```
+
+```jsx
+const btn = document.querySelector("button");
+
+btn.addEventListener("mouseover", function () {
+  btn.textContent = "Starting......";
+  btn.style.backgroundColor = "blue";
 });
 
-// Adding a new <p> element to the document
-const newParagraph = document.createElement('p');
-newParagraph.textContent = 'New paragraph';
-document.body.appendChild(newParagraph);
+btn.addEventListener("mouseleave", function () {
+  btn.textContent = "Again download";
+  btn.style.backgroundColor = "green";
+});
+```
 
-// As `paragraphs` is a live nodeList, it automatically includes the newly added <p> element
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="stle.css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+  </body>
+</html>
+```
 
+```jsx
+document.querySelector("body").addEventListener("mousemove", function (dets) {
+  console.log("moving...", dets);
+});
 ```
